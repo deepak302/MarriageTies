@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/row_story_img_photo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@mipmap/bg" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/row_story_tv_groom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Groom Name: "
+            android:textColor="@color/counter_text_bg"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/row_story_tv_groom_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/row_story_tv_wedding"
+            android:text="Amar Sharma"
+            android:textColor="@color/counter_text_bg"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/row_story_tv_bride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_story_tv_groom_name"
+            android:text="Bride Name: "
+            android:textColor="@color/counter_text_bg"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/row_story_tv_bride_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_story_tv_groom_name"
+            android:layout_toRightOf="@+id/row_story_tv_wedding"
+            android:text="Himani Sharma"
+            android:textColor="@color/counter_text_bg"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/row_story_tv_wedding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_story_tv_bride_name"
+            android:text="Wedding Date: "
+            android:textColor="@color/counter_text_bg"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/row_story_tv_wedding_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_story_tv_bride_name"
+            android:layout_toRightOf="@+id/row_story_tv_wedding"
+            android:text="29/10/2015"
+            android:textColor="@color/counter_text_bg"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/row_story_tv_our_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_story_tv_wedding_date"
+            android:text="Our Story: "
+            android:textColor="@color/counter_text_bg"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/row_story_tv_our_story_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_story_tv_our_story"
+            android:text="Hello My Name is Deepak Sharma and my marriage is arange marriage."
+            android:textColor="@color/counter_text_bg"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

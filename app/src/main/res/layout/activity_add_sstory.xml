@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mentobile.marriageties.AddSStoryActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/add_story_imgv_contact_pic"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/contact_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Touch to Upload Picture" />
+
+            <EditText
+                android:id="@+id/add_story_edt_bride_id"
+                style="@style/EditText_Register"
+                android:hint="Bride's Id" />
+
+            <EditText
+                android:id="@+id/add_story_edt_bride_name"
+                style="@style/EditText_Register"
+                android:hint="Bride's Name" />
+
+            <EditText
+                android:id="@+id/add_story_edt_groom_id"
+                style="@style/EditText_Register"
+                android:hint="Groom's Id" />
+
+            <EditText
+                android:id="@+id/add_story_edt_groom_name"
+                style="@style/EditText_Register"
+                android:hint="Groom's Name" />
+
+            <EditText
+                android:id="@+id/add_story_edt_wedding_date"
+                style="@style/EditText_Register"
+                android:drawableRight="@mipmap/date_picker"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="Wedding Date" />
+
+            <EditText
+                android:id="@+id/add_story_edt_your_exp"
+                style="@style/EditText_Register"
+                android:hint="Your Experience" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/add_story_btn_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/add_story_btn_clear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:text="Clear"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

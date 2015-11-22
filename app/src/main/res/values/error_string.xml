@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //Prompt Message
+    <string name="error_username">"Login Id can't be blank"</string>
+    <string name="error_password">"Password can't be blank"</string>
+
+    // Register Error
+
+    <string name="error_fname">"First Name can't be blank"</string>
+    <string name="error_lname">"Last Name can't be blank"</string>
+    <string name="error_email_verify">Invalid Email id </string>
+    <string name="error_password_register">"Password can't be blank or minimum 6 char length"</string>
+    <string name="error_mobile">Invalid or Empty Phone Number</string>
+    <string name="error_dob">"Date of Birth can't be blank"</string>
+    <string name="error_chk_condition">"Please accept Terms and Condition!"</string>
+    <string name="error_abount">"Please write about us minimum 100 words"</string>
+
+    // End Register Error String
+
+    
+    <string name="error_network">Oops, \n You seem to have gone out of network coverage. Please check your wifi setting or mobile data connection.</string>
+
+    //Toast Message
+    <string name="msg_bucket_item">Please add any Item to Bucket</string>
+
+</resources>

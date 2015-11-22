@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_text"
+    tools:context="com.mentobile.marriageties.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/relhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <EditText
+            android:id="@+id/login_ed_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_design"
+            android:drawableLeft="@mipmap/email"
+            android:focusable="true"
+            android:hint="Enter Login ID"
+            android:inputType="textCapCharacters"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/login_ed_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_ed_username"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_design"
+            android:drawableLeft="@mipmap/password"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/login_tv_forgetpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/login_ed_password"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:text="@string/prompt_tv_forget_pass"
+            android:textColor="@drawable/textview_selector"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relhead"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/login_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:text="Login"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/login_btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:text="New Register"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relhead">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:text="OR"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/login_btn_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/login_fb" />
+
+        </LinearLayout>
+
+    </RelativeLayout>-->
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.mentobile.marriageties.SuccessStoryActivity">
+
+    <ListView
+        android:id="@+id/sstory_list_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sstory_btn_addstory"
+        android:dividerHeight="0dp" />
+
+    <Button
+        android:id="@+id/sstory_btn_addstory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_selector"
+        android:text="Add Success Story"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

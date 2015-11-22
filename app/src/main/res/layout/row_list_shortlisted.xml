@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_item_background"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/row_shorted_img_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/bg" />
+
+        <TextView
+            android:id="@+id/row_shorted_tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="View More"
+            android:textColor="@color/bg_gradient_end" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/row_shorted_img_photo">
+
+            <TextView
+                android:id="@+id/row_shorted_tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="H102433"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/row_shorted_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_shorted_tv_id"
+                android:text="Deepak Sharma"
+                android:textColor="@color/counter_text_bg" />
+
+            <TextView
+                android:id="@+id/row_shorted_tv_age_height_religion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_shorted_tv_name"
+                android:text="24 yrs,6 Ft 6 in, Hindu"
+                android:textColor="@color/counter_text_bg" />
+
+            <TextView
+                android:id="@+id/row_shorted_tv_caste_gotra_education"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_shorted_tv_age_height_religion"
+                android:text="Brahmin - Gaur, MCA"
+                android:textColor="@color/counter_text_bg" />
+
+            <TextView
+                android:id="@+id/row_shorted_tv_city_state_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_shorted_tv_caste_gotra_education"
+                android:text="Gurgaon, Haryana, India"
+                android:textColor="@color/counter_text_bg" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test1"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_launcher" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/ic_launcher" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/test"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_selector"
+        android:text="Send Interest"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,828 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mentobile.marriageties.ProfileDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/prj_dtl_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@mipmap/bg"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:id="@+id/profile_detail_ll_basic_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <!-- <TableLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <TableRow
+                         android:layout_weight="2"
+                         android:padding="7dp">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="BASIC DETAILS"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+                     </TableRow>
+
+                     <TableRow android:background="@color/bg_button_login">
+
+                         <View android:layout_height="1dp" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Name" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Deepak Sharma" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Age" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="27 years" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Height" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="5 Ft 6 in" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Weight" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="40 KG" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Mother Tongue" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Marathi" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Marital Status" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Married" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Skin Tone" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Fair" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Body Type" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Slim" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Eating Habits" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Veg" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Drinking" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Yes" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Blood Group" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="A+" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Smoking" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="No" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Profile Created By" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Self" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Referenced By" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Birth Place" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Mathura" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Birth Time" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Not Available" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Other Known Language" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Hindi" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Hobby" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Cricket" />
+                     </TableRow>
+
+                 </TableLayout>
+
+                 <TableLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <TableRow
+                         android:layout_weight="2"
+                         android:padding="7dp">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="ABOUT ME"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+                     </TableRow>
+
+                     <TableRow android:background="@color/bg_button_login">
+
+                         <View android:layout_height="1dp" />
+                     </TableRow>
+                 </TableLayout>
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Hi My Name is Deepak Sharma, and i am married person and we lookign for beautiful and sexy girl for me." />
+
+                 <TableLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <TableRow
+                         android:layout_weight="2"
+                         android:padding="7dp">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:text="RELIGIOUS INFORMATION"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+                     </TableRow>
+
+                     <TableRow android:background="@color/bg_button_login">
+
+                         <View android:layout_height="1dp" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Religion" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Hindu" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Caste" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Brahmin" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Sub Caste" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Not Available" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Star" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Not Availbale" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Manglik" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="No" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Gothra" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Not Available" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Horoscope" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="" />
+                     </TableRow>
+
+                     <TableRow
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="3">
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="0"
+                             android:text="Moonsign" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight=".2"
+                             android:text=":" />
+
+                         <TextView
+                             style="@style/TextView_Profile_detail"
+                             android:layout_weight="2.8"
+                             android:text="Not Available" />
+                     </TableRow>
+                 </TableLayout>-->
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_weight="2"
+                        android:padding="7dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="LOCATION INFORMATION"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </TableRow>
+
+                    <TableRow android:background="@color/bg_button_login">
+
+                        <View android:layout_height="1dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="0"
+                            android:text="Country" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight=".2"
+                            android:text=":" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="2.8"
+                            android:text="India" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="0"
+                            android:text="Residence Status" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight=".2"
+                            android:text=":" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="2.8"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="0"
+                            android:text="State" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight=".2"
+                            android:text=":" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="2.8"
+                            android:text="Haryana" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="0"
+                            android:text="City" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight=".2"
+                            android:text=":" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="2.8"
+                            android:text="Gurgaon" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="EDUCATIONAL INFORMATION"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TableRow android:background="@color/bg_button_login">
+
+                        <View android:layout_height="1dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="0"
+                            android:text="Education" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight=".2"
+                            android:text=":" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="2.8"
+                            android:text="India" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="0"
+                            android:text="Residence Status" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight=".2"
+                            android:text=":" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="2.8"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="0"
+                            android:text="State" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight=".2"
+                            android:text=":" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="2.8"
+                            android:text="Haryana" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="0"
+                            android:text="City" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight=".2"
+                            android:text=":" />
+
+                        <TextView
+                            style="@style/TextView_Profile_detail"
+                            android:layout_weight="2.8"
+                            android:text="Gurgaon" />
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

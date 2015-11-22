@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_reg_firstname">Enter First Name</string>
+    <string name="string_reg_lastname">Enter Last Name</string>
+    <string name="string_reg_emailid">Enter Email Id</string>
+    <string name="string_reg_password">Enter Password</string>
+    <string name="string_reg_mobile">Enter Mobile No</string>
+    <string name="string_reg_dob">DOB (YYYYMMDD)</string>
+    <string name="string_terms_condition">I Accept Terms $ condition and Privacy Policy.</string>
+
+    <string name="prompt_height">Select Height</string>
+    <string-array name="height">
+        <item>Below 4ft</item>
+        <item>4ft 06in</item>
+        <item>4ft 07in</item>
+        <item>4ft 08in</item>
+        <item>4ft 09in</item>
+        <item>4ft 10in</item>
+        <item>4ft 11in</item>
+        <item>5ft</item>
+        <item>5ft 01in</item>
+        <item>5ft 02in</item>
+        <item>5ft 03in</item>
+        <item>5ft 04in</item>
+        <item>5ft 05in</item>
+        <item>5ft 06in</item>
+        <item>5ft 07in</item>
+        <item>5ft 08in</item>
+        <item>5ft 09in</item>
+        <item>5ft 10in</item>
+        <item>5ft 11in</item>
+        <item>6ft </item>
+        <item>6ft 01in</item>
+        <item>6ft 02in</item>
+        <item>6ft 03in</item>
+        <item>6ft 04in</item>
+        <item>6ft 05in</item>
+        <item>6ft 06in</item>
+        <item>6ft 07in</item>
+        <item>6ft 08in</item>
+        <item>6ft 09in</item>
+        <item>6ft 10in</item>
+        <item>6ft 11in</item>
+        <item>7ft</item>
+        <item>Above 7ft</item>
+    </string-array>
+
+    <string name="prompt_weight">Select Weight</string>
+    <string-array name="weight">
+        <item>40kg</item>
+        <item>41kg</item>
+        <item>42kg</item>
+        <item>43kg</item>
+        <item>44kg</item>
+        <item>45kg</item>
+        <item>46kg</item>
+        <item>47kg</item>
+        <item>48kg</item>
+        <item>49kg</item>
+        <item>50kg</item>
+        <item>51kg</item>
+        <item>52kg</item>
+        <item>53kg</item>
+        <item>54kg</item>
+        <item>55kg</item>
+        <item>56kg</item>
+        <item>57kg</item>
+        <item>58kg</item>
+        <item>59kg</item>
+        <item>60kg</item>
+        <item>61kg</item>
+        <item>62kg</item>
+        <item>63kg</item>
+        <item>64kg</item>
+        <item>65kg</item>
+        <item>66kg</item>
+        <item>67kg</item>
+        <item>68kg</item>
+        <item>69kg</item>
+        <item>70kg</item>
+        <item>71kg</item>
+        <item>72kg</item>
+        <item>73kg</item>
+        <item>74kg</item>
+        <item>75kg</item>
+        <item>76kg</item>
+        <item>77kg</item>
+        <item>78kg</item>
+        <item>79kg</item>
+        <item>80kg</item>
+        <item>81kg</item>
+        <item>82kg</item>
+        <item>83kg</item>
+        <item>84kg</item>
+        <item>85kg</item>
+        <item>86kg</item>
+        <item>87kg</item>
+        <item>88kg</item>
+        <item>89kg</item>
+        <item>90kg</item>
+        <item>91kg</item>
+        <item>92kg</item>
+        <item>93kg</item>
+        <item>94kg</item>
+        <item>95kg</item>
+        <item>96kg</item>
+        <item>97kg</item>
+        <item>98kg</item>
+        <item>99kg</item>
+        <item>100kg</item>
+        <item>101kg</item>
+        <item>102kg</item>
+        <item>103kg</item>
+        <item>104kg</item>
+        <item>105kg</item>
+        <item>106kg</item>
+        <item>107kg</item>
+        <item>108kg</item>
+        <item>109kg</item>
+        <item>110kg</item>
+        <item>111kg</item>
+        <item>112kg</item>
+        <item>113kg</item>
+        <item>114kg</item>
+        <item>115kg</item>
+        <item>116kg</item>
+        <item>117kg</item>
+        <item>118kg</item>
+        <item>119kg</item>
+        <item>120kg</item>
+        <item>121kg</item>
+        <item>122kg</item>
+        <item>123kg</item>
+        <item>124kg</item>
+        <item>125kg</item>
+        <item>126kg</item>
+        <item>127kg</item>
+        <item>128kg</item>
+        <item>129kg</item>
+        <item>130kg</item>
+        <item>131kg</item>
+        <item>132kg</item>
+        <item>133kg</item>
+        <item>134kg</item>
+        <item>135kg</item>
+        <item>136kg</item>
+        <item>137kg</item>
+        <item>138kg</item>
+        <item>139kg</item>
+        <item>140kg</item>
+    </string-array>
+
+    <string name="prompt_Gender">Select Gender</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>FeMale</item>
+        <item>Trans Gender</item>
+    </string-array>
+
+    <string name="prompt_religion">Select Religion</string>
+    <string-array name="religion">
+        <item>Buddhist</item>
+        <item>Christian</item>
+        <item>Hindu</item>
+        <item>Jain</item>
+        <item>Muslim</item>
+        <item>Sikh</item>
+    </string-array>
+
+    <string name="prompt_tongue">Select Mother Tongue</string>
+    <string-array name="tongue">
+        <item>Hindi</item>
+    </string-array>
+
+    <string name="prompt_caste">Select Caste</string>
+    <string-array name="caste">
+        <item>Brahmin</item>
+    </string-array>
+
+    <string name="prompt_marital">Select Your Marital Status</string>
+    <string-array name="marital_status">
+        <item>Unmarried</item>
+        <item>Widow/Widower</item>
+        <item>Divorcee</item>
+        <item>Separated</item>
+    </string-array>
+
+    <string name="prompt_manglik">Select Your Manglik Status</string>
+    <string-array name="mangalik">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string name="prompt_city">Select City</string>
+    <string-array name="city">
+        <item>Achampet</item>
+        <item>Achhayyapalli</item>
+        <item>Achnapalli</item>
+        <item>Adampur</item>
+        <item>Adibatla</item>
+    </string-array>
+
+    <string name="prompt_state">Select State</string>
+    <string-array name="state">
+        <item>Parroquia Andorra la Vella</item>
+        <item>Parroquia Encamp</item>
+        <item>Parroquia Escaldes-Engordany</item>
+        <item>Parroquia Ordino</item>
+        <item>Escaldes</item>
+
+    </string-array>
+
+
+    <string name="prompt_country">Select Country</string>
+    <string-array name="country">
+        <item>India</item>
+        <item>America</item>
+        <item>Africa</item>
+    </string-array>
+
+
+    <string name="prompt_education">Select Education</string>
+    <string-array name="education">
+        <item>BCA</item>
+    </string-array>
+
+    <string name="prompt_employed">Select Employed</string>
+    <string-array name="employed">
+
+        <item>Private</item>
+        <item>Government</item>
+        <item>Business</item>
+        <item>Defence</item>
+        <item>Not Employed in</item>
+    </string-array>
+
+    <string name="prompt_occupation">Select Occupation</string>
+    <string-array name="occupation">
+        <item>Self</item>
+    </string-array>
+
+    <string name="prompt_designation">Select your Designation</string>
+    <string-array name="designation">
+        <item>Software Developer</item>
+    </string-array>
+
+    <string name="prompt_income">Select Annual Income</string>
+    <string-array name="annual_income">
+        <item>Rs10,000-50,000</item>
+        <item>Rs50,000-1,00,000</item>
+        <item>Rs1,00,000-2,00,000</item>
+        <item>Rs2,00,000-5,00,000</item>
+        <item>Rs5,00,000-10,00,000</item>
+        <item>Rs10,00,000-50,00,000</item>
+        <item>Rs50,00,000-1,00,00,000</item>
+        <item>Above Rs 1,00,00,000</item>
+        <item>Does not matter</item>
+
+    </string-array>
+
+    <string name="prompt_looking">Select Looking For</string>
+    <string-array name="looking">
+        <item>Unmerried</item>
+        <item>Divorcee</item>
+        <item>Widow/Wodower</item>
+        <item>Separted</item>
+    </string-array>
+
+    <string name="prompt_age">Select Age</string>
+    <string-array name="age">
+        <item>18 Year</item>
+        <item>19 Year</item>
+        <item>20 Year</item>
+        <item>21 Year</item>
+        <item>22 Year</item>
+        <item>23 Year</item>
+        <item>24 Year</item>
+        <item>25 Year</item>
+        <item>26 Year</item>
+        <item>27 Year</item>
+        <item>28 Year</item>
+        <item>29 Year</item>
+        <item>30 Year</item>
+        <item>31 Year</item>
+        <item>32 Year</item>
+        <item>33 Year</item>
+        <item>34 Year</item>
+        <item>35 Year</item>
+        <item>36 Year</item>
+        <item>37 Year</item>
+        <item>38 Year</item>
+        <item>39 Year</item>
+        <item>40 Year</item>
+        <item>41 Year</item>
+        <item>42 Year</item>
+        <item>43 Year</item>
+        <item>44 Year</item>
+        <item>45 Year</item>
+        <item>46 Year</item>
+        <item>47 Year</item>
+        <item>48 Year</item>
+        <item>49 Year</item>
+        <item>50 Year</item>
+        <item>51 Year</item>
+        <item>52 Year</item>
+        <item>53 Year</item>
+        <item>54 Year</item>
+        <item>55 Year</item>
+        <item>56 Year</item>
+        <item>57 Year</item>
+        <item>58 Year</item>
+        <item>59 Year</item>
+        <item>60 Year</item>
+
+    </string-array>
+
+    <string name="prompt_complexion">Select Complexion</string>
+    <string-array name="complexian">
+        <item>Very Fair</item>
+        <item>Fair</item>
+        <item>Wheatish</item>
+    </string-array>
+
+    <string-array name="body">
+        <item>slim</item>
+        <item>Average</item>
+        <item>Athletic</item>
+        <item>Heavy</item>
+    </string-array>
+
+    <string-array name="eating">
+        <item>Veg</item>
+        <item>Eggetarian</item>
+        <item>Occasionally non veg</item>
+        <item>Non veg</item>
+    </string-array>
+
+    <string-array name="drink">
+        <item>Yes</item>
+        <item>No</item>
+        <item>Occasionally</item>
+    </string-array>
+
+    <string-array name="smoke">
+        <item>Yes</item>
+        <item>No</item>
+        <item>Occasionally</item>
+    </string-array>
+
+    <string-array name="blood">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="profile">
+        <item>Self</item>
+        <item>Parents</item>
+        <item>Guardian</item>
+        <item>Friends</item>
+        <item>Siblings</item>
+        <item>Relatives</item>
+    </string-array>
+
+    <string-array name="reference">
+        <item>Advertisement</item>
+        <item>Friends</item>
+        <item>Search Engines</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="moonsign">
+        <item>Does not matter</item>
+        <item>Mesh(Aries)</item>
+        <item>Vrishabh(Taurus)</item>
+        <item>Mithun(Gemini)</item>
+        <item>Karka(Cancer)</item>
+        <item>Simha(Leo)</item>
+        <item>Kanya(Virgo)</item>
+        <item>Tula(Libra)</item>
+        <item>Vrishika(Scorpio)</item>
+        <item>Dhanu(Sagittrious)</item>
+        <item>Makar(Capricorn)</item>
+        <item>Kumbha(Aquarious)</item>
+        <item>Meen(Pisces)</item>
+
+    </string-array>
+
+    <string-array name="horoscope">
+        <item>Does Not Matter</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="resident">
+        <item>Citizen</item>
+        <item>Permanent Resident</item>
+        <item>Student Visa</item>
+        <item>Temporary Visa</item>
+        <item>Work Permit</item>
+    </string-array>
+
+    <string-array name="family_type">
+        <item>Select Family Type</item>
+        <item>Seperate Family</item>
+        <item>Joint Family</item>
+    </string-array>
+
+    <string-array name="family_status">
+        <item>Select Family Status</item>
+        <item>Rich</item>
+        <item>Upper Middle Class</item>
+        <item>Middle Class</item>
+        <item>Lower Middle Class</item>
+        <item>Poor Family</item>
+    </string-array>
+
+    <string-array name="number">
+        <item>Select</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>4+</item>
+    </string-array>
+    <string-array name="married_brother">
+        <item>No Married brother</item>
+        <item>One Married brother</item>
+        <item>Two Married brother</item>
+        <item>Three Married brother</item>
+        <item>Four Married brother</item>
+        <item>Above four Married brother</item>
+    </string-array>
+
+    <string-array name="married_sister">
+        <item>No Married sister</item>
+        <item>One Married sister</item>
+        <item>Two Married sister</item>
+        <item>Three Married sister</item>
+        <item>Four Married sister</item>
+        <item>Above four Married sister</item>
+    </string-array>
+
+    <string-array name="star">
+        <item>Does not matter</item>
+        <item>ANUSHAM</item>
+        <item>ASHWINI</item>
+        <item>AVITTAM</item>
+        <item>AYILYAM</item>
+        <item>BHARANI</item>
+        <item>CHITTHIRAT</item>
+        <item>HASTHAM</item>
+        <item>KETTAI</item>
+        <item>KRITHIGAI</item>
+        <item>MAHAM</item>
+        <item>MOOLAM</item>
+        <item>MARGASIRISHAM</item>
+        <item>POOSAM</item>
+        <item>PUNARPUSAM</item>
+        <item>PURADAM</item>
+        <item>PURAM</item>
+        <item>PURATATHI</item>
+        <item>REVATHI</item>
+        <item>ROHINI</item>
+    </string-array>
+
+
+</resources>

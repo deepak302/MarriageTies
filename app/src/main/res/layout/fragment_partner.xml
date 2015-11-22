@@ -1,0 +1,228 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framelayout_partner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.mentobile.marriageties.Fragment_Partner">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/partner_btn_continue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/register_spn_education"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_education" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_employee"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_employed" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_occupation"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_occupation" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_designation"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_designation" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_income"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_income" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <EditText
+                android:id="@+id/register_edt_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_design_register"
+                android:hint="About Me"
+                android:maxLines="4"
+                android:minLines="4"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fg_bg"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:text="Partner Detail"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/register_spn_p_looking"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_looking" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/register_spn_p_start_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:prompt="@string/prompt_age"
+                        android:spinnerMode="dropdown" />
+
+                    <LinearLayout style="@style/LinearLayout_Spinner" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/register_spn_p_end_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:prompt="@string/prompt_age"
+                        android:spinnerMode="dropdown" />
+
+                    <LinearLayout style="@style/LinearLayout_Spinner" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/register_spn_p_country"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_country" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_p_religion"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_religion" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_p_caste"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_caste" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/register_spn_p_start_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:prompt="@string/prompt_height"
+                        android:spinnerMode="dropdown" />
+
+                    <LinearLayout style="@style/LinearLayout_Spinner" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/register_spn_p_end_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:prompt="@string/prompt_height"
+                        android:spinnerMode="dropdown" />
+
+                    <LinearLayout style="@style/LinearLayout_Spinner" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/register_spn_p_education"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_education" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_p_complexion"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_complexion" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_p_tongue"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_tongue" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_p_income"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_income" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/partner_btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_selector"
+        android:text="Continue"
+        android:textColor="#ffffff"
+        android:textSize="17sp" />
+
+</RelativeLayout>

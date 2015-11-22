@@ -1,0 +1,94 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="actionBarItemBackground">@drawable/selectable_background_style</item>
+        <!--<item name="dropDownListViewStyle">@style/DropDownListView.Style</item>-->
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Style</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Style</item>
+        <item name="actionModeBackground">@color/background_floating_material_dark</item>
+        <item name="actionModeSplitBackground">@color/background_floating_material_dark</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Style</item>
+
+        // Light.DarkActionBar specific
+        <item name="actionBarWidgetTheme">@style/Theme.Style.Widget</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Style" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@color/brown</item>
+        <item name="backgroundStacked">@color/brown</item>
+        <item name="backgroundSplit">@color/brown</item>
+    </style>
+
+    <style name="DropDownListView.Style" parent="@style/Widget.AppCompat.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_style</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Style" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_style</item>
+    </style>
+
+    <style name="DropDownNav.Style" parent="@style/Widget.AppCompat.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_style</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_style</item>
+        <!--<item name="android:dropDownSelector">@drawable/selectable_background_style</item>-->
+    </style>
+
+    <style name="ActionButton.CloseMode.Style" parent="@style/Widget.AppCompat.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_style</item>
+    </style>
+
+    <!--//this style is only referenced in a Light.DarkActionBar based theme-->
+
+    <style name="Theme.Style.Widget" parent="@style/Theme.AppCompat">
+        <!--<item name="dropDownListViewStyle">@style/DropDownListView.Style</item>-->
+    </style>
+
+
+    <style name="EditText_Register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="Spinner_Register">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/chocolate</item>
+        <item name="android:spinnerMode">dialog</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="LinearLayout_Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@color/counter_text_bg</item>
+    </style>
+
+    <style name="Button_Register">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="TextView_Profile_detail">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/counter_text_bg</item>
+
+    </style>
+
+</resources>
