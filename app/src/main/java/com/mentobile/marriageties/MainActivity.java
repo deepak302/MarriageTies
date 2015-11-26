@@ -146,15 +146,15 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        edSearchData = (EditText) findViewById(R.id.main_ed_anyType);
-        edSearchData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentSearch = new Intent(MainActivity.this, SearchActivity.class);
-                startActivity(intentSearch);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
-        });
+//        edSearchData = (EditText) findViewById(R.id.main_ed_anyType);
+//        edSearchData.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intentSearch = new Intent(MainActivity.this, SearchActivity.class);
+//                startActivity(intentSearch);
+//                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+//            }
+//        });
 
         lvFilterData = (ListView) findViewById(R.id.main_list_data);
         lvFilterData.setOnItemClickListener(this);
@@ -256,6 +256,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         // as you specify a parent activity in AndroidManifest.xml.
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
+        }
+        switch (item.getItemId()){
+
         }
         return super.onOptionsItemSelected(item);
     }

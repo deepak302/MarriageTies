@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <EditText
+            <!--<EditText
                 android:id="@+id/main_ed_anyType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
                 android:editable="false"
                 android:hint="Search"
                 android:padding="8dp"
-                android:singleLine="true" />
+                android:singleLine="true" />-->
 
             <ListView
                 android:id="@+id/main_list_data"

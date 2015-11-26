@@ -1,6 +1,7 @@
 package com.mentobile.marriageties;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -12,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import com.mentobile.utility.DBHandler;
@@ -29,7 +31,6 @@ public class Fragment_Partner extends Fragment implements AdapterView.OnItemSele
 
     private static final String TAG = "FragmentPartner";
     private static final int SERVICE_ID_CASTE = 1;
-    private Fragment_RegComplete fragmentRegComplete;
 
     private Spinner spnEducation;
     private Spinner spnEmployee;
@@ -87,16 +88,33 @@ public class Fragment_Partner extends Fragment implements AdapterView.OnItemSele
     private String strPartTongue = "";
     private String strPartIncome = "";
 
+    Fragment_RegComplete fragmentRegComplete ;
 
     public Fragment_Partner() {
         // Required empty public constructor
+    }
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        Log.d(TAG, ":::::On Attatch");
+        RelativeLayout relativeLayout = (RelativeLayout)getActivity().findViewById(R.id.framelayout_profile);
+        relativeLayout.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.d(TAG, ":::::On DeAttatch");
+        RelativeLayout relativeLayout = (RelativeLayout)getActivity().findViewById(R.id.framelayout_profile);
+        relativeLayout.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         fragmentRegComplete = new Fragment_RegComplete();
+
     }
 
     @Override
@@ -208,16 +226,17 @@ public class Fragment_Partner extends Fragment implements AdapterView.OnItemSele
         ArrayAdapter<String> adapterPIncome = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, listIncome);
         spnPartIncome.setAdapter(adapterPIncome);
 
-        Button button = (Button) view.findViewById(R.id.partner_btn_continue);
+        Button button = (Button) view.findViewById(R.id.partner_btn_continue1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d(TAG, "::::::Button Click");
                 checkPartnerRegistration();
             }
         });
+
         return view;
     }
-
 
     private void checkPartnerRegistration() {
 
@@ -225,29 +244,31 @@ public class Fragment_Partner extends Fragment implements AdapterView.OnItemSele
         if (strAbout.length() < 100) {
             edAbout.setError(getResources().getString(R.string.error_abount));
         } else {
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("edu_id", strEducation));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("employed_in", strEmployee));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("occupation", strOccupation));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("designation", strDesignation));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("annual_income", strIncome));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("profile_text", strAbout));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("looking_for", strPartLooking));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("pfrom_age", strPartStartAge));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("pto_age", strPartEndAge));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("pcountry", strPartCountry));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("part_religion_id", strPartReligion));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("part_caste_id", strPartCaste));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("pform_height", strPartStartHeight));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("pto_height", strPartEndHeight));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("peducation", strPartEducation));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("pcomplexion", strPartComplexion));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("pmtongue", strPartTongue));
-            FragmentProfile.valuePairsRegister.add(new BasicNameValuePair("pannual_income", strPartIncome));
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.setCustomAnimations(R.anim.slide_in_right, 0, 0, R.anim.slide_out_right);
-            transaction.replace(R.id.framelayout_partner, fragmentRegComplete);
-            transaction.addToBackStack(null);
-            transaction.commit();
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("edu_id", strEducation));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("employed_in", strEmployee));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("occupation", strOccupation));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("designation", strDesignation));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("annual_income", strIncome));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("profile_text", strAbout));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("looking_for", strPartLooking));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("pfrom_age", strPartStartAge));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("pto_age", strPartEndAge));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("pcountry", strPartCountry));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("part_religion_id", strPartReligion));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("part_caste_id", strPartCaste));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("pform_height", strPartStartHeight));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("pto_height", strPartEndHeight));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("peducation", strPartEducation));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("pcomplexion", strPartComplexion));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("pmtongue", strPartTongue));
+            RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("pannual_income", strPartIncome));
+
+
+        FragmentTransaction transaction1 = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction1.setCustomAnimations(R.anim.slide_in_right, 0, 0, R.anim.slide_out_right);
+        transaction1.replace(android.R.id.content, fragmentRegComplete);
+        transaction1.addToBackStack(null);
+        transaction1.commit();
         }
     }
 

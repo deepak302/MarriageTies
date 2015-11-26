@@ -1,5 +1,6 @@
 package com.mentobile.marriageties;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -33,6 +34,7 @@ import java.util.ArrayList;
 
 public class Fragment_RegComplete extends Fragment implements View.OnClickListener {
 
+    private static final String TAG = "FragmentRegister";
     private ImageView imgProfile;
     private CheckBox chkTermsCondition;
     private Button btnUpload;
@@ -128,8 +130,7 @@ public class Fragment_RegComplete extends Fragment implements View.OnClickListen
         @Override
         protected JSONObject doInBackground(String... params) {
             WebService webService = new WebService();
-            JSONObject jsonObject = webService.makeHttpRequest(Application.URL_REGISTRATION, FragmentProfile.valuePairsRegister);
-            Log.d("Fragment", ":::::Json Data " + jsonObject.toString());
+            JSONObject jsonObject = webService.makeHttpRequest(Application.URL_REGISTRATION, RegisterActivity.valuePairsRegister);
             return jsonObject;
         }
 

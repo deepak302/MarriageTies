@@ -57,6 +57,15 @@
     <string name="app_id">127204864290874</string>
     <string name="exception">Exception: %1$s</string>
 
+    // Seacrh Data
+
+    <string-array name="action_tab_name">
+        <item>Quick Search</item>
+        <item>Advance Search</item>
+        <item>Keyword Search</item>
+        <item>Id Search</item>
+    </string-array>
+
     //Navigation Drawer
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -75,5 +84,18 @@
         <item>Sign In</item>
     </string-array>
     <string name="title_activity_profile_detail">ProfileDetailActivity</string>
+    <string name="title_activity_search_result">SearchResultActivity</string>
+
+    // Search Data
+
+    <string name="prompt_quick_serach_heading_text">Regular Search is the most popular search based on a
+    few important criteria one would look for in a life partner</string>
+    <string name="prompt_quick_search_photo">Search With Photo</string>
+
+    <string name="prompt_advance_search">
+        Advanced Search is the most comprehensive search that searches across all
+        profile information. The results of this search will be closer to your expectations.
+    </string>
+    <string name="prompt_advance_criteria">Advance Search Criteria</string>
 
 </resources>

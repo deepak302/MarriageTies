@@ -35,7 +35,6 @@ import java.util.ArrayList;
 
 public class LoginActivity extends ActionBarActivity implements View.OnClickListener, GetDataUsingWService.GetWebServiceData {
 
-    private FragmentProfile fragmentProfile;
     private Button btnRegister;
     private final String TAG = "LoginActivity";
     private Button btnLogin;
@@ -125,7 +124,6 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         tvForgetPass.setOnClickListener(this);
 
         webService = new WebService();
-        fragmentProfile = new FragmentProfile();
 
     }
 
@@ -171,11 +169,9 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                 }
                 break;
             case R.id.login_btn_register:
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.slide_in_right, 0, 0, R.anim.slide_out_right);
-                transaction.replace(R.id.login_rl_main, fragmentProfile);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.login_tv_forgetpassword:
                 forgetPassword();

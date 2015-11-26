@@ -36,6 +36,9 @@ public class Application {
     public final static String URL = "http://www.mentobile.com/homzz/";
     public final static String SP_LOGIN_LOGOUT = "login_logout";
 
+
+    public final static String URL_REGISTRATION = "http://matrimonialscript.in/ultimate_webservices/final_regi_new.php";
+    public final static String URL_LOGIN = "http://matrimonialscript.in/ultimate_webservices/login.php";
     public final static String URL_RELIGION = "http://matrimonialscript.in/ultimate_webservices/get-religion.php";
     public final static String URL_MOTHER_TONGUE = "http://matrimonialscript.in/ultimate_webservices/get-mothertongue.php";
     public final static String URL_CASTE = "http://matrimonialscript.in/ultimate_webservices/get-caste.php?religion_id=";
@@ -45,9 +48,7 @@ public class Application {
     public final static String URL_EDUCATION = "http://matrimonialscript.in/ultimate_webservices/get-education.php";
     public final static String URL_OCCUPATION = "http://matrimonialscript.in/ultimate_webservices/get-occupation.php";
     public final static String URL_DESIGNATION = "http://matrimonialscript.in/ultimate_webservices/get_designation.php";
-
-    public final static String URL_REGISTRATION = "http://matrimonialscript.in/ultimate_webservices/final_regi_new.php";
-    public final static String URL_LOGIN = "http://matrimonialscript.in/ultimate_webservices/login.php";
+    public final static String URL_PART_MATCHES = "http://matrimonialscript.in/ultimate_webservices/part_matches.php";
 
 
     public final static String PATH_IMAGE_FOLDER = URL + "images/";
@@ -66,6 +67,12 @@ public class Application {
     public static final String TIME_PATTERN2 = "HH:mm:ss a";//16:46:56 AM
     public static final String TIME_PATTERN3 = "HH:mm:ss:S aa";//16:34:56:67678 PM
     public static final String TIME_PATTERN1 = "HHmmss";
+
+    public static final int SERVICE_ID_RELIGION = 1;
+    public static final int SERVICE_ID_CASTE = 2;
+    public static final int SERVICE_ID_COUNTRY = 3;
+    public static final int SERVICE_ID_STATE = 4;
+    public static final int SERVICE_ID_CITY = 5;
 
     private static URL url = null;
 

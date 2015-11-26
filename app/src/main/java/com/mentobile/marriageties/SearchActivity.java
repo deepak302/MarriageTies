@@ -1,14 +1,20 @@
 package com.mentobile.marriageties;
 
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-import com.mentobile.utility.DBHandler;
+public class SearchActivity extends AppCompatActivity implements ActionBar.TabListener {
 
-public class SearchActivity extends AppCompatActivity {
-
+    private ViewPager viewPager;
+    Toolbar toolbar;
 
     @Override
     public void onBackPressed() {
@@ -21,6 +27,31 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        final ActionBar actionBar = getSupportActionBar();
+
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        String tabs[] = getResources().getStringArray(R.array.action_tab_name);
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        viewPager = (ViewPager) findViewById(R.id.search_viewpager);
+        MyTabPagerAdapter pagerAdapter = new MyTabPagerAdapter(getSupportFragmentManager(), tabs.length);
+        viewPager.setAdapter(pagerAdapter);
+
+        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                actionBar.setSelectedNavigationItem(position);
+            }
+        });
+        for (String tab_name : tabs) {
+            actionBar.addTab(
+                    actionBar.newTab()
+                            .setText(tab_name)
+                            .setTabListener(this));
+        }
     }
 
     @Override
@@ -41,7 +72,21 @@ public class SearchActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+        viewPager.setCurrentItem(tab.getPosition());
+    }
+
+    @Override
+    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+    }
+
+    @Override
+    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
     }
 }

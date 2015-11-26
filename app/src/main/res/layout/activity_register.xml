@@ -1,9 +1,163 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framelayout_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/white"
     tools:context="com.mentobile.marriageties.RegisterActivity">
 
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profile_btn_continue"
+        android:layout_marginTop="20dp">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/register_edt_firstname"
+                style="@style/EditText_Register"
+                android:hint="@string/string_reg_firstname"
+                android:inputType="textAutoComplete"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/register_edt_lastname"
+                style="@style/EditText_Register"
+                android:hint="@string/string_reg_lastname"
+                android:inputType="textAutoComplete"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/register_edt_emailid"
+                style="@style/EditText_Register"
+                android:hint="@string/string_reg_emailid"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/register_edt_password"
+                style="@style/EditText_Register"
+                android:hint="@string/string_reg_password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/register_edt_mobile"
+                style="@style/EditText_Register"
+                android:hint="@string/string_reg_mobile"
+                android:inputType="number"
+                android:maxLength="10"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/register_edt_dob"
+                style="@style/EditText_Register"
+                android:drawableRight="@mipmap/date_picker"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/string_reg_dob"
+                android:inputType="number"
+                android:singleLine="true" />
+
+            <Spinner
+                android:id="@+id/register_spn_height"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_height" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_weight"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_weight" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_gender"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_Gender" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_religion"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_religion" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_tongue"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_tongue" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_caste"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_caste" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_marital"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_marital" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_manglik"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_manglik" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_country"
+                style="@style/Spinner_Register"
+
+                android:prompt="@string/prompt_country" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_state"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_state" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/register_spn_city"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_city" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/profile_btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_selector"
+        android:text="Step1"
+        android:textColor="#ffffff"
+        android:textSize="17sp" />
+
+</RelativeLayout>

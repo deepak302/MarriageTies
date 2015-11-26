@@ -1,0 +1,267 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mentobile.marriageties.FragmentAdvanceSearch">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/search_advance_ll_button"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/search_advance_tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/prompt_advance_search"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/search_advance_tv_search_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textAllCaps="true"
+                android:text="@string/prompt_advance_criteria"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
+                android:id="@+id/search_advance_spn_gender"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_Gender" />
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Spinner
+                    android:id="@+id/search_advance_spn_start_age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:prompt="@string/prompt_age" />
+
+                <Spinner
+                    android:id="@+id/search_advance_spn_end_age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:prompt="@string/prompt_age" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Spinner
+                    android:id="@+id/search_advance_spn_start_height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:prompt="@string/prompt_height" />
+
+                <Spinner
+                    android:id="@+id/search_advance_spn_end_height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:prompt="@string/prompt_height" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_marital_status"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_marital" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_religion"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_religion" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_caste"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_caste" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_tongue"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_tongue" />
+
+            <CheckBox
+                android:id="@+id/search_advance_chk_with_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="@string/prompt_quick_search_photo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textAllCaps="true"
+                android:text="LOCATION DETAILS"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_country"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_country" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_state"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_state" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_city"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_city" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textAllCaps="true"
+                android:text="EDUCATION / OCCUPATION / ANNUAL INCOME DETAILS"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_education"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_education" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_occupation"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_occupation" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_income"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_income" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textAllCaps="true"
+                android:text="Eating habits / Drinking / Smoking Details"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_eating"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_eating" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_drinking"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_drinking" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_smoking"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_smoking" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textAllCaps="true"
+                android:text="Appearance"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_complexion"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_complexion" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_body_type"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_body" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textAllCaps="true"
+                android:text="Horoscope Details"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_star"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_star" />
+
+            <com.mentobile.utility.MultiSpinner
+                android:id="@+id/search_advance_spn_manglik"
+                style="@style/Spinner_Register"
+                android:prompt="@string/prompt_manglik" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/search_advance_ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="3dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/search_advance_btn_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/button_selector"
+            android:text="Search Now"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <!--<Button
+            android:id="@+id/search_advance_btn_save_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:text="Saved Search"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>
+

@@ -30,7 +30,7 @@
     </style>
 
     <style name="ActionBarTabStyle.Style" parent="@style/Widget.AppCompat.ActionBar.TabView">
-        <item name="android:background">@drawable/tab_indicator_ab_style</item>
+        <!--<item name="android:background">@drawable/tab_indicator_ab_style</item>-->
     </style>
 
     <style name="DropDownNav.Style" parent="@style/Widget.AppCompat.Spinner.DropDown.ActionBar">
@@ -46,7 +46,7 @@
     <!--//this style is only referenced in a Light.DarkActionBar based theme-->
 
     <style name="Theme.Style.Widget" parent="@style/Theme.AppCompat">
-        <!--<item name="dropDownListViewStyle">@style/DropDownListView.Style</item>-->
+        <item name="dropDownListViewStyle">@style/DropDownListView.Style</item>
     </style>
 
 
@@ -86,6 +86,8 @@
     </style>
 
     <style name="TextView_Profile_detail">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">@color/counter_text_bg</item>
 
