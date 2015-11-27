@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -49,6 +50,7 @@ public class MultiSpinner extends Spinner implements
     public void onCancel(DialogInterface dialog) {
         // refresh text on spinner
         StringBuffer spinnerBuffer = new StringBuffer();
+        List<String> listData = new ArrayList<>();
         boolean someUnselected = false;
         for (int i = 0; i < items.size(); i++) {
             if (selected[i] == true) {
@@ -56,6 +58,7 @@ public class MultiSpinner extends Spinner implements
                     spinnerBuffer.append(", ");
                 }
                 someUnselected = true;
+                listData.add(items.get(i));
                 spinnerBuffer.append(items.get(i));
             }
         }
@@ -70,8 +73,8 @@ public class MultiSpinner extends Spinner implements
                 new String[]{spinnerText});
         setAdapter(adapter);
 
-        listener.onItemsSelected(selected, data, getId());
-        Log.d("MultipleSelection ", "::::::Muplit " + getId() + " ::: spinner " + getSelectedItemId() + " pos " + getSelectedItemPosition());
+        listener.onItemsSelected(selected, listData, data, getId());
+//        Log.d("MultipleSelection ", "::::::Muplit " + getId() + " ::: spinner " + getSelectedItemId() + " pos " + getSelectedItemPosition());
     }
 
     @Override
@@ -118,7 +121,12 @@ public class MultiSpinner extends Spinner implements
     }
 
     public interface MultiSpinnerListener {
-        public void onItemsSelected(boolean[] selected, String data, int id);
+        /**
+         * @inheritDoc
+         *
+         * This implementation is very, very slow when b equals 3.
+         */
+        public void onItemsSelected(boolean[] selected, List<String> listData, String data, int id);
     }
 
 }

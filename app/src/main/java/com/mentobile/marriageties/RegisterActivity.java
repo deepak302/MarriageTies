@@ -339,7 +339,7 @@ public class RegisterActivity extends ActionBarActivity implements AdapterView.O
             case R.id.register_spn_religion:
                 strReligion = SplashActivity.dbHandler.getIDUsingName(DBHandler.TBL_RELIGION, arrayListReligion.get(position));
 //                //       Get Data Caste data from Web Service
-                GetDataUsingWService casteService = new GetDataUsingWService(this, Application.URL_CASTE + strReligion, SERVICE_ID_CASTE, nameValuePairs, this);
+                GetDataUsingWService casteService = new GetDataUsingWService(this, Application.URL_CASTE_MULTIPLE + strReligion, SERVICE_ID_CASTE, nameValuePairs, this);
                 Application.StartAsyncTaskInParallel(casteService);
 
                 break;

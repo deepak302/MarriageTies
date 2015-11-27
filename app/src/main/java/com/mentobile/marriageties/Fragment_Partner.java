@@ -306,7 +306,7 @@ public class Fragment_Partner extends Fragment implements AdapterView.OnItemSele
             case R.id.register_spn_p_religion:
                 strPartReligion = listPReligion.get(position);
                 strPartReligion = SplashActivity.dbHandler.getIDUsingName(DBHandler.TBL_RELIGION, strPartReligion);
-                GetDataUsingWService casteService = new GetDataUsingWService(getActivity(), Application.URL_CASTE + strPartReligion, SERVICE_ID_CASTE, nameValuePairs, this);
+                GetDataUsingWService casteService = new GetDataUsingWService(getActivity(), Application.URL_CASTE_MULTIPLE + strPartReligion, SERVICE_ID_CASTE, nameValuePairs, this);
                 Application.StartAsyncTaskInParallel(casteService);
                 break;
             case R.id.register_spn_p_caste:

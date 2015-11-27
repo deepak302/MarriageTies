@@ -41,14 +41,15 @@ public class Application {
     public final static String URL_LOGIN = "http://matrimonialscript.in/ultimate_webservices/login.php";
     public final static String URL_RELIGION = "http://matrimonialscript.in/ultimate_webservices/get-religion.php";
     public final static String URL_MOTHER_TONGUE = "http://matrimonialscript.in/ultimate_webservices/get-mothertongue.php";
-    public final static String URL_CASTE = "http://matrimonialscript.in/ultimate_webservices/get-caste.php?religion_id=";
+    public final static String URL_CASTE_MULTIPLE = "http://matrimonialscript.in/ultimate_webservices/get_multiple_cast.php?religion_id=";
     public final static String URL_COUNTRY = "http://matrimonialscript.in/ultimate_webservices/get-country.php";
-    public final static String URL_STATE = "http://matrimonialscript.in/ultimate_webservices/get-state.php?id=";
-    public final static String URL_CITY = "http://matrimonialscript.in/ultimate_webservices/get-city.php?country_id=";
+    public final static String URL_STATE = "http://matrimonialscript.in/ultimate_webservices/get_multiple_state.php?country_id=";
+    public final static String URL_CITY = "http://matrimonialscript.in/ultimate_webservices/get_multiple_city.php?country_id=";
     public final static String URL_EDUCATION = "http://matrimonialscript.in/ultimate_webservices/get-education.php";
     public final static String URL_OCCUPATION = "http://matrimonialscript.in/ultimate_webservices/get-occupation.php";
     public final static String URL_DESIGNATION = "http://matrimonialscript.in/ultimate_webservices/get_designation.php";
     public final static String URL_PART_MATCHES = "http://matrimonialscript.in/ultimate_webservices/part_matches.php";
+    public final static String URL_SEARCH = "http://matrimonialscript.in/ultimate_webservices/search.php";
 
 
     public final static String PATH_IMAGE_FOLDER = URL + "images/";

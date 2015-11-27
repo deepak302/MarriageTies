@@ -98,6 +98,8 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
             NvItems items = (arrNVItems).get(arrNVItems.size() - 1);
             items.setTitle(getString(R.string.prompt_logout));
             nvAdapter.notifyDataSetChanged();
+            Profile profile = Profile.getProfile();
+            profile.setEmailID(strMatriID);
         }
     }
 
@@ -245,7 +247,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -257,8 +259,12 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
-        switch (item.getItemId()){
-
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                Intent intentSearch = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(intentSearch);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

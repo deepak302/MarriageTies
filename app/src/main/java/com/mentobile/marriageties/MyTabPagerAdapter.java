@@ -18,7 +18,6 @@ public class MyTabPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        Log.d("TabsPageAdapter ", ":::::Adapter " + position);
         switch (position) {
             case 0:
                 FragmentQuickSearch quickSearch = new FragmentQuickSearch();

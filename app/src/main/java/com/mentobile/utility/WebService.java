@@ -44,11 +44,11 @@ public class WebService {
             HttpPost httpPost = new HttpPost(url);
             //Depends on your web service
             httpPost.setHeader("Content-Type", "application/x-www-form-urlencoded");
-            Log.d(TAG, "::::::Params " + params);
+//            Log.d(TAG, "::::::Params " + params);
             httpPost.setEntity(new UrlEncodedFormEntity(params));
-            Log.d(TAG, ":::::URl " + httpPost.getEntity());
+//            Log.d(TAG, ":::::URl " + httpPost.getEntity());
             HttpResponse httpResponse = httpClient.execute(httpPost);
-            Log.d(TAG, ":::::URl1 " + httpResponse.getEntity());
+//            Log.d(TAG, ":::::URl1 " + httpResponse.getEntity());
             HttpEntity httpEntity = httpResponse.getEntity();
             InputStreamReader isr = new InputStreamReader(httpEntity.getContent());
             BufferedReader reader = new BufferedReader(isr);
