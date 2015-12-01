@@ -5,7 +5,8 @@ package com.mentobile.marriageties;
  */
 public class ProfileShorted {
 
-    private int Id;
+    private String photo;
+    private String Id;
     private String name;
     private String age;
     private String height;
@@ -17,8 +18,9 @@ public class ProfileShorted {
     private String state;
     private String country;
 
-    public ProfileShorted(int id, String name, String age, String height, String religion, String caste, String gotra, String education, String city, String state, String country) {
-        Id = id;
+    public ProfileShorted(String photo, String id, String name, String age, String height, String religion, String caste, String gotra, String education, String city, String state, String country) {
+        this.photo = photo;
+        this.Id = id;
         this.name = name;
         this.age = age;
         this.height = height;
@@ -31,11 +33,19 @@ public class ProfileShorted {
         this.country = country;
     }
 
-    public int getId() {
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public String getId() {
         return Id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         Id = id;
     }
 

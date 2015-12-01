@@ -180,12 +180,14 @@
                 style="@style/Spinner_Register"
                 android:prompt="@string/prompt_eating" />
 
-            <com.mentobile.utility.MultiSpinner
+            <Spinner
                 android:id="@+id/search_advance_spn_drinking"
                 style="@style/Spinner_Register"
                 android:prompt="@string/prompt_drinking" />
 
-            <com.mentobile.utility.MultiSpinner
+            <LinearLayout style="@style/LinearLayout_Spinner" />
+
+            <Spinner
                 android:id="@+id/search_advance_spn_smoking"
                 style="@style/Spinner_Register"
                 android:prompt="@string/prompt_smoking" />
@@ -223,7 +225,7 @@
                 style="@style/Spinner_Register"
                 android:prompt="@string/prompt_star" />
 
-            <com.mentobile.utility.MultiSpinner
+            <Spinner
                 android:id="@+id/search_advance_spn_manglik"
                 style="@style/Spinner_Register"
                 android:prompt="@string/prompt_manglik" />

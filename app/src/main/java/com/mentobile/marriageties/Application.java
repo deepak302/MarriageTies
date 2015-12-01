@@ -48,11 +48,11 @@ public class Application {
     public final static String URL_EDUCATION = "http://matrimonialscript.in/ultimate_webservices/get-education.php";
     public final static String URL_OCCUPATION = "http://matrimonialscript.in/ultimate_webservices/get-occupation.php";
     public final static String URL_DESIGNATION = "http://matrimonialscript.in/ultimate_webservices/get_designation.php";
-    public final static String URL_PART_MATCHES = "http://matrimonialscript.in/ultimate_webservices/part_matches.php";
+    public final static String URL_PART_MATCHES = "http://matrimonialscript.in/ultimate_webservices/custom_match.php";
     public final static String URL_SEARCH = "http://matrimonialscript.in/ultimate_webservices/search.php";
-
-
-    public final static String PATH_IMAGE_FOLDER = URL + "images/";
+    public final static String URL_VIEW_PROFILE = "http://matrimonialscript.in/ultimate_webservices/view_profile.php";
+    public final static String URL_PHOTO_CROP = "http://matrimonialscript.in/ultimate_webservices/photos/";
+    public final static String URL_PHOTO_BIG = "http://matrimonialscript.in/ultimate_webservices/photos_big/";
 
     public static final String DATE_PATTERN1 = "dd.MM.yy";
     public static final String DATE_PATTERN2 = "yyyyMMdd";

@@ -1,12 +1,8 @@
 package com.mentobile.marriageties;
 
-import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
-import android.os.AsyncTask;
-import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -23,21 +19,20 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.mentobile.utility.DBHandler;
+import com.mentobile.utility.CProgressDialog;
 
 import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Locale;
-import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener, GetDataUsingWService.GetWebServiceData {
 
@@ -53,10 +48,11 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     private TextView tvNVEmail;
     private TextView tvNVName;
     private ListView lvFilterData;
-    private ArrayList<ProfileShorted> storyArrayList = new ArrayList<>();
+    static ArrayList<ProfileShorted> sortedProfileList = new ArrayList<>();
     private AdapterShortedProfile adapterShortedProfile;
-
+    CProgressDialog cProgressDialog;
     private EditText edSearchData;
+    ArrayList<NameValuePair> nameValuePairs = new ArrayList<>();
 
     private int nvIcon[] = {R.drawable.register, R.drawable.success, R.drawable.search, R.drawable.payment, R.drawable.online,
             R.drawable.contact, R.drawable.privacy_policy, R.drawable.refund, R.drawable.terms, R.mipmap.ic_launcher};
@@ -108,6 +104,8 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        cProgressDialog = new CProgressDialog(this);
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
@@ -148,25 +146,17 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-//        edSearchData = (EditText) findViewById(R.id.main_ed_anyType);
-//        edSearchData.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intentSearch = new Intent(MainActivity.this, SearchActivity.class);
-//                startActivity(intentSearch);
-//                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-//            }
-//        });
+        nameValuePairs.add(new BasicNameValuePair("user_id", Profile.getProfile().getEmailID()));
+        GetDataUsingWService getDataUsingWService = new GetDataUsingWService(this, Application.URL_PART_MATCHES, 0, nameValuePairs, this);
+        Application.StartAsyncTaskInParallel(getDataUsingWService);
 
         lvFilterData = (ListView) findViewById(R.id.main_list_data);
         lvFilterData.setOnItemClickListener(this);
-        for (int i = 0; i < 15; i++) {
-            ProfileShorted profileShorted = new ProfileShorted(i, "Name " + i, "" + 20 + i, "5 Ft 6 in", "Hindu", "Brahmin", "Gaur", "MCA", "Gurgaon", "Haryana", "India");
-            storyArrayList.add(profileShorted);
-        }
-        adapterShortedProfile = new AdapterShortedProfile(getApplicationContext(), R.layout.row_list_shortlisted, storyArrayList);
+
+        adapterShortedProfile = new AdapterShortedProfile(getApplicationContext(), R.layout.row_list_shortlisted, sortedProfileList);
         lvFilterData.setAdapter(adapterShortedProfile);
     }
+
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -177,6 +167,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
             view.startAnimation(animation);
 
             Intent intent = new Intent(MainActivity.this, ProfileDetailActivity.class);
+            intent.putExtra("matri_id", sortedProfileList.get(position).getId());
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
@@ -271,6 +262,32 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
     @Override
     public void getWebServiceData_JSON(JSONObject jsonObject, int serviceCounter) {
+
         Log.d(TAG, "::::::Service Data " + jsonObject + " Counter " + serviceCounter);
+        if (serviceCounter == 0) {
+            try {
+                JSONArray jsonArray = jsonObject.getJSONArray("match");
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+                    String photoPath = jsonObject1.getString("photo1");
+                    String matri_id = jsonObject1.getString("matri_id");
+                    String name = jsonObject1.getString("username");
+                    String age = jsonObject1.getString("Age");
+                    String height = jsonObject1.getString("height");
+                    String religion = ""; // this field is not available in search web service
+                    String caste = jsonObject1.getString("caste_name");
+                    String gotra = jsonObject1.getString("mtongue_name");
+                    String education = jsonObject1.getString("edu_name");
+                    String city = jsonObject1.getString("city_name");
+                    String state = jsonObject1.getString("state_name");
+                    String country = jsonObject1.getString("country_name");
+                    ProfileShorted profileShorted = new ProfileShorted(photoPath, matri_id, name, age, height, religion, caste, gotra, education, city, state, country);
+                    sortedProfileList.add(profileShorted);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        adapterShortedProfile.notifyDataSetChanged();
     }
 }

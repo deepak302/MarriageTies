@@ -84,15 +84,12 @@ public class DBHandler extends SQLiteOpenHelper {
     public void insertData(String tableName, ContentValues values) {
         SQLiteDatabase db = getWritableDatabase();
         String name = values.getAsString("NAME");
-        Log.d(TAG,"::::Name "+name);
         Pattern pattern = Pattern.compile(patterData);
         Matcher matcher = pattern.matcher(name);
         if(matcher.find()){
             String newData = matcher.replaceFirst("");
-            Log.d(TAG,"::::New Name "+newData);
             values.put("NAME", newData);
         }
-        Log.d(TAG,"::::New Name "+values.size());
         db.insert(tableName, null, values);
     }
 

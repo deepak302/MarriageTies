@@ -1,13 +1,90 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context="com.mentobile.marriageties.FragmentKeywordSearch">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Keyword Search" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/prompt_search_keyword" />
+
+        <Spinner
+            android:id="@+id/search_keyword_spn_gender"
+            style="@style/Spinner_Register"
+            android:prompt="@string/prompt_Gender" />
+
+        <LinearLayout style="@style/LinearLayout_Spinner" />
+
+        <EditText
+            android:id="@+id/search_keyword_ed_keyword"
+            style="@style/EditText_Register"
+            android:hint="Enter your Keyword" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/search_keyword_rb_with_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="With photo" />
+
+            <RadioButton
+                android:id="@+id/search_keyword_rb_without_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Without photo" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/search_keyword_btn_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/button_selector"
+                android:text="Search Now"
+                android:textColor="#ffffff"
+                android:textSize="17sp" />
+
+            <!--<Button
+                android:id="@+id/search_quick_btn_save_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="Saved Search"
+                android:textColor="#ffffff"
+                android:textSize="17sp" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

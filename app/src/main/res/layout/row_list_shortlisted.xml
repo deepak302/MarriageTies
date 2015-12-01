@@ -19,7 +19,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center_vertical"
-            android:background="@mipmap/bg" />
+            android:src="@mipmap/no_photo" />
 
         <TextView
             android:id="@+id/row_shorted_tv_more"
@@ -43,7 +43,6 @@
                 android:text="H102433"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/row_shorted_tv_name"
@@ -88,27 +87,31 @@
         android:layout_margin="10dp"
         android:orientation="horizontal">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/row_shorted_img_sendMSG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/ic_launcher" />
+            android:background="@mipmap/message" />
 
         <ImageButton
+            android:id="@+id/row_shorted_img_shortlist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@mipmap/ic_launcher" />
+            android:background="@mipmap/shortlist" />
 
         <ImageButton
+            android:id="@+id/row_shorted_img_block"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
-            android:background="@mipmap/ic_launcher" />
+            android:background="@mipmap/blocklist" />
 
     </LinearLayout>
 
     <Button
+        android:id="@+id/row_shorted_btn_sendInterest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

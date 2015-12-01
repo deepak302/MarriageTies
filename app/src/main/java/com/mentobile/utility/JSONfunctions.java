@@ -51,6 +51,7 @@ public class JSONfunctions {
 		try {
 
 			jArray = new JSONObject(result);
+			Log.e("log_tag", "::::JSON " + jArray);
 		} catch (JSONException e) {
 			Log.e("log_tag", "Error parsing data " + e.toString());
 		}

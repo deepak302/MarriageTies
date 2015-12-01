@@ -22,6 +22,7 @@ import com.mentobile.utility.WebService;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -67,6 +68,7 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
     ArrayList<NameValuePair> nameValuePairs = new ArrayList<>();
 
     private String strStartHeight = "";
+
     private String strEndHeight = "";
     private String strGender = "";
     private String strStartAge = "";
@@ -86,11 +88,9 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
     private final int HEIGHT_MIN = 3;
     private final int HEIGHT_MAX = 8;
 
-
     public FragmentQuickSearch() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -142,8 +142,10 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
         spnReligion.setItems(listReligion, getString(R.string.prompt_religion), this);
 
         spnCaste = (MultiSpinner) view.findViewById(R.id.search_quick_spn_caste);
-        GetDataUsingWService casteService = new GetDataUsingWService(getActivity(), Application.URL_CASTE_MULTIPLE + 32, Application.SERVICE_ID_CASTE, nameValuePairs, this);
-        Application.StartAsyncTaskInParallel(casteService);
+//        listCaste  = Arrays.asList(getResources().getStringArray(R.array.caste));
+        spnCaste.setItems(listCaste, getString(R.string.prompt_caste), this);
+//        GetDataUsingWService casteService = new GetDataUsingWService(getActivity(), Application.URL_CASTE_MULTIPLE + 32, Application.SERVICE_ID_CASTE, nameValuePairs, this);
+//        Application.StartAsyncTaskInParallel(casteService);
 
         spnMotherTongue = (MultiSpinner) view.findViewById(R.id.search_quick_spn_tongue);
         listMTongue = SplashActivity.dbHandler.getData(DBHandler.TBL_MOTHER_TONGUE);
@@ -154,14 +156,18 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
         spnCountry.setItems(listCountry, getString(R.string.prompt_country), this);
 
         spnState = (MultiSpinner) view.findViewById(R.id.search_quick_spn_state);
-        GetDataUsingWService casteState = new GetDataUsingWService(getActivity(), Application.URL_STATE + 1, Application.SERVICE_ID_STATE, nameValuePairs, this);
-        Application.StartAsyncTaskInParallel(casteState);
+//        listState  = Arrays.asList(getResources().getStringArray(R.array.state));
+        spnState.setItems(listState, getString(R.string.prompt_state), this);
+//        GetDataUsingWService casteState = new GetDataUsingWService(getActivity(), Application.URL_STATE + 1, Application.SERVICE_ID_STATE, nameValuePairs, this);
+//        Application.StartAsyncTaskInParallel(casteState);
 
         spnCity = (MultiSpinner) view.findViewById(R.id.search_quick_spn_city);
+//        listCity  = Arrays.asList(getResources().getStringArray(R.array.city));
         spnCity.setItems(listCity, getString(R.string.prompt_city), this);
-        String urlCity = Application.URL_CITY + 1 + "&state_id=" + 1;
-        GetDataUsingWService cityService = new GetDataUsingWService(getActivity(), urlCity, Application.SERVICE_ID_CITY, nameValuePairs, this);
-        Application.StartAsyncTaskInParallel(cityService);
+        String urlCity = Application.URL_CITY + 95 + "&state_id=" + 1316;
+//        GetDataUsingWService cityService = new GetDataUsingWService(getActivity(), urlCity, Application.SERVICE_ID_CITY, nameValuePairs, this);
+//        Application.StartAsyncTaskInParallel(cityService);
+
 
         spnEducation = (MultiSpinner) view.findViewById(R.id.search_quick_spn_education);
         listEducation = SplashActivity.dbHandler.getData(DBHandler.TBL_EDUCATION);
@@ -223,8 +229,8 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
                     values.put("ID", id);
                     values.put("NAME", name);
                     values.put("STATUS", status);
-//                    Log.d(TAG, ":::::Caste " + name);
-                    listCaste.add(name);
+                    Log.d(TAG, ":::::Caste " + name);
+                    listCaste.add("" + name);
                     SplashActivity.dbHandler.insertData(DBHandler.TBL_CASTE, values);
                     //  Log.d(TAG, ":::::Caste " + name);
                 }
@@ -251,7 +257,7 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
                     values.put("ID", id);
                     values.put("NAME", name);
                     values.put("STATUS", status);
-                    Log.d(TAG, ":::::State " + name);
+//                    Log.d(TAG, ":::::State " + name);
                     listState.add(name);
                     SplashActivity.dbHandler.insertData(DBHandler.TBL_STATE, values);
                 }
@@ -272,7 +278,7 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
             SplashActivity.dbHandler.clearAllData(DBHandler.TBL_CITY);
             try {
                 JSONArray jsonarray = jsonObject.getJSONArray("city");
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < jsonarray.length(); i++) {
                     jsonObject = jsonarray.getJSONObject(i);
                     String id = jsonObject.getString("city_id");
                     String name = jsonObject.getString("city_name");
@@ -281,7 +287,7 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
                     values.put("ID", id);
                     values.put("NAME", name);
                     values.put("STATUS", status);
-                    Log.d(TAG, ":::::City " + name);
+//                    Log.d(TAG, ":::::City " + name);
                     listCity.add(name);
                     SplashActivity.dbHandler.insertData(DBHandler.TBL_CITY, values);
                 }
@@ -293,7 +299,7 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
         }
     }
 
-    private String getDataInArraay(List<String> listData, String dbName) {
+    private String getDataInArray(List<String> listData, String dbName) {
         StringBuilder stringBuilder = new StringBuilder();
         boolean selected = false;
         for (String str : listData) {
@@ -369,39 +375,38 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
 
             case R.id.search_quick_spn_marital_status:
                 strMaritalStatus = data;
-                Log.d(TAG, ":::::Religion " + strMaritalStatus);
                 break;
             case R.id.search_quick_spn_religion:
-                strReligion = getDataInArraay(listData, DBHandler.TBL_RELIGION);
+                strReligion = getDataInArray(listData, DBHandler.TBL_RELIGION);
                 Log.d(TAG, ":::::Religion " + strReligion);
                 GetDataUsingWService casteService = new GetDataUsingWService(getActivity(), Application.URL_CASTE_MULTIPLE + strReligion, Application.SERVICE_ID_CASTE, nameValuePairs, this);
                 Application.StartAsyncTaskInParallel(casteService);
                 break;
             case R.id.search_quick_spn_caste:
-                strCaste = getDataInArraay(listData, DBHandler.TBL_CASTE);
-                Log.d(TAG, ":::::Caste " + strCaste);
+                strCaste = getDataInArray(listData, DBHandler.TBL_CASTE);
+//                Log.d(TAG, ":::::Caste " + strCaste);
                 break;
             case R.id.search_quick_spn_tongue:
-                strMTongue = getDataInArraay(listData, DBHandler.TBL_MOTHER_TONGUE);
-                Log.d(TAG, ":::::Mother Tongue " + strMTongue);
+                strMTongue = getDataInArray(listData, DBHandler.TBL_MOTHER_TONGUE);
+//                Log.d(TAG, ":::::Mother Tongue " + strMTongue);
                 break;
             case R.id.search_quick_spn_country:
-                strCountry = getDataInArraay(listData, DBHandler.TBL_COUNTRY);
-                Log.d(TAG, ":::::Country " + strCountry);
+                strCountry = getDataInArray(listData, DBHandler.TBL_COUNTRY);
+//                Log.d(TAG, ":::::Country " + strCountry);
                 GetDataUsingWService casteState = new GetDataUsingWService(getActivity(), Application.URL_STATE + strCountry, Application.SERVICE_ID_STATE, nameValuePairs, this);
                 Application.StartAsyncTaskInParallel(casteState);
                 break;
             case R.id.search_quick_spn_state:
-                strState = getDataInArraay(listData, DBHandler.TBL_STATE);
+                strState = getDataInArray(listData, DBHandler.TBL_STATE);
                 String urlCity = Application.URL_CITY + strCountry + "&state_id=" + strState;
                 GetDataUsingWService cityService = new GetDataUsingWService(getActivity(), urlCity, Application.SERVICE_ID_CITY, nameValuePairs, this);
                 Application.StartAsyncTaskInParallel(cityService);
                 break;
             case R.id.search_quick_spn_city:
-                strCity = getDataInArraay(listData, DBHandler.TBL_CITY);
+                strCity = getDataInArray(listData, DBHandler.TBL_CITY);
                 break;
             case R.id.search_quick_spn_education:
-                strEducation = getDataInArraay(listData, DBHandler.TBL_EDUCATION);
+                strEducation = getDataInArray(listData, DBHandler.TBL_EDUCATION);
                 break;
         }
     }
@@ -422,6 +427,30 @@ public class FragmentQuickSearch extends Fragment implements AdapterView.OnItemS
         protected JSONObject doInBackground(String... params) {
             WebService webService = new WebService();
             JSONObject jsonObject = webService.makeHttpRequest(Application.URL_SEARCH, nameValuePairs);
+            try {
+                JSONArray jsonArray = jsonObject.getJSONArray("Country");
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+
+                    String photoPath = jsonObject1.getString("photo1");
+                    String matri_id = jsonObject1.getString("matri_id");
+                    String name = jsonObject1.getString("username");
+                    String age = jsonObject1.getString("Age");
+                    String height = jsonObject1.getString("height");
+                    String religion = ""; // this field is not available in search web service
+                    String caste = jsonObject1.getString("caste_name");
+                    String gotra = jsonObject1.getString("mtongue_name");
+                    ;// this field is not available in search web service
+                    String education = jsonObject1.getString("edu_name");
+                    String city = jsonObject1.getString("city_name");
+                    String state = jsonObject1.getString("state_name");
+                    String country = jsonObject1.getString("country_name");
+                    ProfileShorted profileShorted = new ProfileShorted(photoPath, matri_id, name, age, height, religion, caste, gotra, education, city, state, country);
+                    MainActivity.sortedProfileList.add(profileShorted);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             return jsonObject;
         }
 

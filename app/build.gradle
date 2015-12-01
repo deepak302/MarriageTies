@@ -26,4 +26,5 @@ dependencies {
     compile 'com.google.android.gms:play-services:7.5.0'
     compile 'com.facebook.android:facebook-android-sdk:4.4.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile files('libs/volley.jar')
 }

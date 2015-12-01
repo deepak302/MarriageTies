@@ -97,5 +97,13 @@
         profile information. The results of this search will be closer to your expectations.
     </string>
     <string name="prompt_advance_criteria">Advance Search Criteria</string>
+    
+    <string name="prompt_search_keyword">
+        Find profiles based on keywords.Exp : hindu, Rajput, male, 25 - 30 Yrs,Ahmedabad
+    </string>
+
+    <string name="prompt_search_id">
+        Find profiles faster with id search.Exp :NE11110
+    </string>
 
 </resources>

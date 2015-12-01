@@ -62,6 +62,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_name"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Deepak Sharma" />
@@ -82,6 +83,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_age"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="27 years" />
@@ -102,6 +104,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_height"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="5 Ft 6 in" />
@@ -122,6 +125,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_weight"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="40 KG" />
@@ -142,6 +146,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_tounge"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Marathi" />
@@ -162,6 +167,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_marital"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Married" />
@@ -182,6 +188,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_skin_type"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Fair" />
@@ -202,6 +209,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_body_type"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Slim" />
@@ -222,6 +230,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_eating"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Veg" />
@@ -242,6 +251,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_drinking"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Yes" />
@@ -262,6 +272,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_blood"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="A+" />
@@ -282,6 +293,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_smoking"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="No" />
@@ -302,6 +314,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_profile_created_by"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Self" />
@@ -322,6 +335,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_referenced_by"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="" />
@@ -342,6 +356,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_birth_place"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Mathura" />
@@ -362,6 +377,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_birth_time"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -382,6 +398,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_other_language"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Hindi" />
@@ -402,13 +419,14 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_hobby"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Cricket" />
                     </TableRow>
 
                 </TableLayout>
-                -->
+
 
                 <TableLayout
                     android:layout_width="match_parent"
@@ -433,6 +451,7 @@
                 </TableLayout>
 
                 <TextView
+                    android:id="@+id/view_profile_tv_about"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Hi My Name is Deepak Sharma, and i am married person and we lookign for beautiful and sexy girl for me." />
@@ -472,6 +491,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_religion"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Hindu" />
@@ -492,6 +512,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_caste"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Brahmin" />
@@ -512,6 +533,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_sub_caste"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -532,6 +554,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_star"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Availbale" />
@@ -552,6 +575,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_manglik"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="No" />
@@ -572,6 +596,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_gothra"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -592,6 +617,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_horoscope"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="" />
@@ -612,6 +638,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_moonsign"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -654,6 +681,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_country"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="India" />
@@ -674,6 +702,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_residance_status"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="" />
@@ -694,6 +723,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_state"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Haryana" />
@@ -714,6 +744,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_city"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Gurgaon" />
@@ -753,6 +784,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_education"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="MCA" />
@@ -773,6 +805,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_designation"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Software Engineer" />
@@ -793,6 +826,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_employed"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Self" />
@@ -813,6 +847,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_occupation"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Business" />
@@ -833,6 +868,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_income"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Rs 10,000,00 - 2,00,000" />
@@ -873,6 +909,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_family"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -893,6 +930,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_family_status"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -913,6 +951,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_father"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -933,6 +972,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_mother"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -953,6 +993,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_father_occupation"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Business" />
@@ -973,6 +1014,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_mother_occupation"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Business" />
@@ -993,6 +1035,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_no_brothers"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="2" />
@@ -1013,6 +1056,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_no_sister"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="1" />
@@ -1033,6 +1077,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_married_brother"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -1053,6 +1098,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_married_sister"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -1073,6 +1119,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_about_family"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -1128,6 +1175,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_looking_for"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Unmarried" />
@@ -1148,6 +1196,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_age_preference"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="20 to 30 years" />
@@ -1168,6 +1217,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_expectations"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -1188,6 +1238,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_height_preference"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="5Ft 1 in to 5ft 10in" />
@@ -1208,6 +1259,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_tongue"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Marathi" />
@@ -1228,6 +1280,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_body_type"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -1248,6 +1301,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_eating"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="" />
@@ -1268,6 +1322,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_smoking"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="" />
@@ -1288,6 +1343,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_drinking"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="No" />
@@ -1308,6 +1364,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_skin_tone"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Fair" />
@@ -1348,6 +1405,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_religion"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Hindu" />
@@ -1368,6 +1426,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_caste"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Brahmin" />
@@ -1388,6 +1447,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_star"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -1408,6 +1468,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_manglik"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Yes" />
@@ -1448,6 +1509,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_education"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="MCA" />
@@ -1468,26 +1530,7 @@
                             android:text=":" />
 
                         <TextView
-                            style="@style/TextView_Profile_detail"
-                            android:layout_weight="11"
-                            android:text="Software Engineer" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="20">
-
-                        <TextView
-                            style="@style/TextView_Profile_detail"
-                            android:layout_weight="8"
-                            android:text="Designation" />
-
-                        <TextView
-                            style="@style/TextView_Profile_detail"
-                            android:layout_weight="1"
-                            android:text=":" />
-
-                        <TextView
+                            android:id="@+id/view_profile_tv_part_designation"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Software Engineer" />
@@ -1508,6 +1551,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_income"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
@@ -1528,6 +1572,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_occupation"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Business" />
@@ -1548,6 +1593,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_employed"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="" />
@@ -1588,6 +1634,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_country"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="India" />
@@ -1608,6 +1655,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_city"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Gurgaon" />
@@ -1628,6 +1676,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_state"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Haryana" />
@@ -1648,6 +1697,7 @@
                             android:text=":" />
 
                         <TextView
+                            android:id="@+id/view_profile_tv_part_residancy_status"
                             style="@style/TextView_Profile_detail"
                             android:layout_weight="11"
                             android:text="Not Available" />
