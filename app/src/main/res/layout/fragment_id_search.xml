@@ -19,13 +19,6 @@
             android:layout_height="match_parent"
             android:text="@string/prompt_search_id" />
 
-        <Spinner
-            android:id="@+id/search_id_spn_gender"
-            style="@style/Spinner_Register"
-            android:prompt="@string/prompt_Gender" />
-
-        <LinearLayout style="@style/LinearLayout_Spinner" />
-
         <EditText
             android:id="@+id/search_id_ed_keyword"
             style="@style/EditText_Register"

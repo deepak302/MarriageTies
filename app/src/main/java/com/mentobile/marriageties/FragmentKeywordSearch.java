@@ -33,12 +33,11 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class FragmentKeywordSearch extends Fragment implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class FragmentKeywordSearch extends Fragment implements View.OnClickListener {
 
     private static final String TAG = "KeywordSearch";
     ArrayList<NameValuePair> nameValuePairs = new ArrayList<>();
 
-    private Spinner spnGender;
     private EditText edKeyword;
     private RadioButton rdbWithPhoto;
     private RadioButton rdbWithoutPhoto;
@@ -46,13 +45,8 @@ public class FragmentKeywordSearch extends Fragment implements AdapterView.OnIte
     private Button btnSearch;
     private Button btnSaveSearch;
 
-
-    List<String> listGender = new ArrayList<>();
-
-    private String strGender = "";
     private String strKeyword = "";
     private String strPhoto = "";
-
 
     public FragmentKeywordSearch() {
         // Required empty public constructor
@@ -69,12 +63,6 @@ public class FragmentKeywordSearch extends Fragment implements AdapterView.OnIte
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_keyword_search, container, false);
-
-        spnGender = (Spinner) view.findViewById(R.id.search_keyword_spn_gender);
-        spnGender.setOnItemSelectedListener(this);
-        listGender = Arrays.asList(getResources().getStringArray(R.array.search_gender_type));
-        ArrayAdapter<String> adapterGender = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, listGender);
-        spnGender.setAdapter(adapterGender);
 
         edKeyword = (EditText) view.findViewById(R.id.search_keyword_ed_keyword);
 
@@ -104,7 +92,6 @@ public class FragmentKeywordSearch extends Fragment implements AdapterView.OnIte
         strKeyword = edKeyword.getText().toString().trim();
         if (!TextUtils.isEmpty(strKeyword)) {
             nameValuePairs.add(new BasicNameValuePair("user_id", Profile.getProfile().getEmailID()));
-            nameValuePairs.add(new BasicNameValuePair("gender", strGender));
             nameValuePairs.add(new BasicNameValuePair("keyword", strKeyword));
             nameValuePairs.add(new BasicNameValuePair("photo_search", strPhoto));
 
@@ -118,16 +105,6 @@ public class FragmentKeywordSearch extends Fragment implements AdapterView.OnIte
     }
 
     private CProgressDialog cProgressDialog;
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        strGender = listGender.get(position);
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 
     @Override
     public void onClick(View v) {
@@ -171,6 +148,7 @@ public class FragmentKeywordSearch extends Fragment implements AdapterView.OnIte
                     String city = jsonObject1.getString("city_name");
                     String state = jsonObject1.getString("state_name");
                     String country = jsonObject1.getString("country_name");
+                    MainActivity.sortedProfileList.clear();
                     ProfileShorted profileShorted = new ProfileShorted(photoPath, matri_id, name, age, height, religion, caste, gotra, education, city, state, country);
                     MainActivity.sortedProfileList.add(profileShorted);
                 }

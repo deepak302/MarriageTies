@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Fragment_Partner extends Fragment implements AdapterView.OnItemSelectedListener, GetDataUsingWService.GetWebServiceData {
+public class FragmentPartner extends Fragment implements AdapterView.OnItemSelectedListener, GetDataUsingWService.GetWebServiceData {
 
     private static final String TAG = "FragmentPartner";
     private static final int SERVICE_ID_CASTE = 1;
@@ -88,9 +88,9 @@ public class Fragment_Partner extends Fragment implements AdapterView.OnItemSele
     private String strPartTongue = "";
     private String strPartIncome = "";
 
-    Fragment_RegComplete fragmentRegComplete ;
+    FragmentRegComplete fragmentRegComplete ;
 
-    public Fragment_Partner() {
+    public FragmentPartner() {
         // Required empty public constructor
     }
 
@@ -113,7 +113,7 @@ public class Fragment_Partner extends Fragment implements AdapterView.OnItemSele
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        fragmentRegComplete = new Fragment_RegComplete();
+        fragmentRegComplete = new FragmentRegComplete();
 
     }
 
@@ -241,7 +241,7 @@ public class Fragment_Partner extends Fragment implements AdapterView.OnItemSele
     private void checkPartnerRegistration() {
 
         strAbout = edAbout.getText().toString().trim();
-        if (strAbout.length() < 100) {
+        if (strAbout.length() < 50) {
             edAbout.setError(getResources().getString(R.string.error_abount));
         } else {
             RegisterActivity.valuePairsRegister.add(new BasicNameValuePair("edu_id", strEducation));

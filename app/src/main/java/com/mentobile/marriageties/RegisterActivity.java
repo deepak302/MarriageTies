@@ -91,14 +91,14 @@ public class RegisterActivity extends ActionBarActivity implements AdapterView.O
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
-    Fragment_Partner fragmentPartner;
+    FragmentPartner fragmentPartner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        fragmentPartner = new Fragment_Partner();
+        fragmentPartner = new FragmentPartner();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -253,6 +253,11 @@ public class RegisterActivity extends ActionBarActivity implements AdapterView.O
             transaction.addToBackStack(null);
             transaction.commit();
         }
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.setCustomAnimations(R.anim.slide_in_right, 0, 0, R.anim.slide_out_right);
+//        transaction.replace(android.R.id.content, new FragmentRegComplete());
+//        transaction.addToBackStack(null);
+//        transaction.commit();
     }
 
     @Override
@@ -307,7 +312,7 @@ public class RegisterActivity extends ActionBarActivity implements AdapterView.O
             ArrayList<String> tempCity = new ArrayList<>();
             try {
                 JSONArray jsonarray = jsonObject.getJSONArray("city");
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < jsonarray.length(); i++) {
                     jsonObject = jsonarray.getJSONObject(i);
                     String id = jsonObject.getString("city_id");
                     String name = jsonObject.getString("city_name");

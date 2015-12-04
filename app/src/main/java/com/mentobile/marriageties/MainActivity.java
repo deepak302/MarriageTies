@@ -24,6 +24,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.mentobile.utility.CProgressDialog;
+import com.pkmmte.view.CircularImageView;
+import com.squareup.picasso.Picasso;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -31,6 +33,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -47,15 +53,28 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     ArrayList<NvItems> arrNVItems = new ArrayList<NvItems>();
     private TextView tvNVEmail;
     private TextView tvNVName;
+    private CircularImageView circularImageView;
     private ListView lvFilterData;
     static ArrayList<ProfileShorted> sortedProfileList = new ArrayList<>();
+    ArrayList<ProfileShorted> matchProfileList = new ArrayList<>();
     private AdapterShortedProfile adapterShortedProfile;
     CProgressDialog cProgressDialog;
     private EditText edSearchData;
     ArrayList<NameValuePair> nameValuePairs = new ArrayList<>();
+    String strLoginID;
 
-    private int nvIcon[] = {R.drawable.register, R.drawable.success, R.drawable.search, R.drawable.payment, R.drawable.online,
-            R.drawable.contact, R.drawable.privacy_policy, R.drawable.refund, R.drawable.terms, R.mipmap.ic_launcher};
+    private int nvIcon[] = {
+            R.drawable.register,
+            R.drawable.success,
+            R.drawable.search,
+            R.drawable.payment,
+            R.drawable.online,
+            R.drawable.contact,
+            R.drawable.privacy_policy,
+            R.drawable.refund,
+            R.drawable.terms,
+            R.mipmap.ic_launcher};
+    private URI uri;
 
     @Override
     public void onBackPressed() {
@@ -82,20 +101,13 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     @Override
     protected void onStart() {
         super.onStart();
-        setProfile();
-    }
-
-    private void setProfile() {
-        String strMatriID = Application.getDataFromSharedPreference(this, Application.SP_LOGIN_LOGOUT, "matri_id");
-        if (strMatriID != null) {
-            strMatriID = strMatriID.toUpperCase(Locale.US);
-            tvNVName.setText(strMatriID);
-            tvNVEmail.setText("");
-            NvItems items = (arrNVItems).get(arrNVItems.size() - 1);
-            items.setTitle(getString(R.string.prompt_logout));
-            nvAdapter.notifyDataSetChanged();
-            Profile profile = Profile.getProfile();
-            profile.setEmailID(strMatriID);
+        strLoginID = Application.getDataFromSharedPreference(this, Application.SP_LOGIN_LOGOUT, "matri_id");
+        Log.d(TAG, ":::::Matri Id " + strLoginID);
+        if (strLoginID != null) {
+            ArrayList<NameValuePair> valuePairsID = new ArrayList<>();
+            valuePairsID.add(new BasicNameValuePair("matri_id", strLoginID));
+            GetDataUsingWService getDataUsingWService = new GetDataUsingWService(this, Application.URL_VIEW_PROFILE, 1, valuePairsID, this);
+            Application.StartAsyncTaskInParallel(getDataUsingWService);
         }
     }
 
@@ -113,10 +125,12 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         final ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.nv_header, null, false);
         tvNVEmail = (TextView) viewGroup.findViewById(R.id.nvheader_tv_pemail);
         tvNVName = (TextView) viewGroup.findViewById(R.id.nvheader_tv_pname);
+        circularImageView = (CircularImageView) viewGroup.findViewById(R.id.nv_header_img_pphoto);
         mDrawerList.addHeaderView(viewGroup, null, false);
 
         ActionBar actionBar = getSupportActionBar();
         String nv_array[] = getResources().getStringArray(R.array.prompt_nv_drawer);
+
         for (int i = 0; i < nv_array.length; i++) {
             NvItems items = new NvItems(nvIcon[i], nv_array[i], null, false);
             arrNVItems.add(items);
@@ -153,10 +167,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         lvFilterData = (ListView) findViewById(R.id.main_list_data);
         lvFilterData.setOnItemClickListener(this);
 
-        adapterShortedProfile = new AdapterShortedProfile(getApplicationContext(), R.layout.row_list_shortlisted, sortedProfileList);
+        adapterShortedProfile = new AdapterShortedProfile(getApplicationContext(), R.layout.row_list_shortlisted, matchProfileList);
         lvFilterData.setAdapter(adapterShortedProfile);
     }
-
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -167,10 +180,9 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
             view.startAnimation(animation);
 
             Intent intent = new Intent(MainActivity.this, ProfileDetailActivity.class);
-            intent.putExtra("matri_id", sortedProfileList.get(position).getId());
+            intent.putExtra("matri_id", matchProfileList.get(position).getId());
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
 
         } else {
             switch (position) {
@@ -282,7 +294,41 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                     String state = jsonObject1.getString("state_name");
                     String country = jsonObject1.getString("country_name");
                     ProfileShorted profileShorted = new ProfileShorted(photoPath, matri_id, name, age, height, religion, caste, gotra, education, city, state, country);
-                    sortedProfileList.add(profileShorted);
+                    matchProfileList.add(profileShorted);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else if (serviceCounter == 1) {
+            try {
+                JSONArray jsonArray = jsonObject.getJSONArray("view_profile");
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+                    String photoPath = jsonObject1.getString("photo1");
+                    String username = jsonObject1.getString("username");
+
+                    tvNVName.setText(strLoginID.toUpperCase(Locale.US));
+                    tvNVEmail.setText(username);
+                    try {
+                        URL url = new URL(Application.URL_PHOTO_BIG + photoPath);
+                        uri = url.toURI();
+                    } catch (URISyntaxException e) {
+                        e.printStackTrace();
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+                    Picasso.with(getApplicationContext())
+                            .load(uri.toString())
+                            .error(R.mipmap.no_photo)
+                            .fit()
+                            .placeholder(R.mipmap.no_photo)
+                            .into(circularImageView);
+                    NvItems items = (arrNVItems).get(arrNVItems.size() - 1);
+                    items.setTitle(getString(R.string.prompt_logout));
+                    nvAdapter.notifyDataSetChanged();
+                    Profile profile = Profile.getProfile();
+                    profile.setEmailID(strLoginID);
+                    profile.setName(username);
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

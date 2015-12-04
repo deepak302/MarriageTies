@@ -14,8 +14,9 @@
     <string name="error_mobile">Invalid or Empty Phone Number</string>
     <string name="error_dob">"Date of Birth can't be blank"</string>
     <string name="error_chk_condition">"Please accept Terms and Condition!"</string>
-    <string name="error_abount">"Please write about us minimum 100 words"</string>
-
+    <string name="error_abount">"Please write about us minimum 50 words"</string>
+    <string name="error_image_upload">"Please select your profile picture!"</string>
+    <string name="error_image_upload_server">"Please select your profile picture and upload to server!"</string>
     // End Register Error String
 
     

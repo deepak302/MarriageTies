@@ -66,9 +66,9 @@ public class AdapterViewPager extends PagerAdapter {
         }
         Picasso.with(activity.getApplicationContext())
                 .load(uri.toString())
-                .error(R.mipmap.no_photo)
+                .error(R.mipmap.no_banner_photo)
                 .fit()
-                .placeholder(R.mipmap.no_photo)
+                .placeholder(R.mipmap.no_banner_photo)
                 .into(imageView);
 
 //        TextView textView = (TextView) view.findViewById(R.id.viewpager_image_counter);

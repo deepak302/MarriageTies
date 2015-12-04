@@ -17,7 +17,6 @@
                 android:id="@+id/prj_dtl_viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@mipmap/bg"
                 android:visibility="visible" />
 
 

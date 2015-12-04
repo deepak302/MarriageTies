@@ -36,8 +36,7 @@ public class Application {
     public final static String URL = "http://www.mentobile.com/homzz/";
     public final static String SP_LOGIN_LOGOUT = "login_logout";
 
-
-    public final static String URL_REGISTRATION = "http://matrimonialscript.in/ultimate_webservices/final_regi_new.php";
+    public final static String URL_REGISTRATION = "http://matrimonialscript.in/ultimate_webservices/final_regi.php";
     public final static String URL_LOGIN = "http://matrimonialscript.in/ultimate_webservices/login.php";
     public final static String URL_RELIGION = "http://matrimonialscript.in/ultimate_webservices/get-religion.php";
     public final static String URL_MOTHER_TONGUE = "http://matrimonialscript.in/ultimate_webservices/get-mothertongue.php";
@@ -53,6 +52,9 @@ public class Application {
     public final static String URL_VIEW_PROFILE = "http://matrimonialscript.in/ultimate_webservices/view_profile.php";
     public final static String URL_PHOTO_CROP = "http://matrimonialscript.in/ultimate_webservices/photos/";
     public final static String URL_PHOTO_BIG = "http://matrimonialscript.in/ultimate_webservices/photos_big/";
+    public final static String URL_UPLOAD_SMALL  = "http://matrimonialscript.in/ultimate_webservices/fileupload.php";
+    public final static String URL_UPLOAD_BIG = "http://matrimonialscript.in/ultimate_webservices/fileupload1.php";
+    public final static String URL_SUCCESS_STORY = "http://matrimonialscript.in/ultimate_webservices/get-successstory.php";
 
     public static final String DATE_PATTERN1 = "dd.MM.yy";
     public static final String DATE_PATTERN2 = "yyyyMMdd";

@@ -72,19 +72,19 @@ public class AdapterSuccessStory extends ArrayAdapter<SuccessStory> {
             holder = (RecordHolder) gridView.getTag();
         }
         SuccessStory successStory = storyArrayList.get(position);
-//        try {
-//            URL url = new URL(Application.PATH_IMAGE_FOLDER + projectListItem.getImageName());
-//            uri = url.toURI();
-//        } catch (URISyntaxException e) {
-//            e.printStackTrace();
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-//        Picasso.with(context)
-//                .load(uri.toString())
-//                .error(R.mipmap.bg)
-//                .fit()
-//                .into(holder.imgStoryPhoto);
+        try {
+            URL url = new URL(Application.URL_PHOTO_CROP + successStory.getImgPath());
+            uri = url.toURI();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        Picasso.with(context)
+                .load(uri.toString())
+                .error(R.mipmap.no_photo)
+                .fit()
+                .into(holder.imgStoryPhoto);
 
         holder.tvBrideName.setText(successStory.getBrideName());
         holder.tvGroomName.setText(successStory.getGroomName());

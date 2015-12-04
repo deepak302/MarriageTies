@@ -311,6 +311,7 @@ public class FragmentAdvanceSearch extends Fragment implements AdapterView.OnIte
                     String city = jsonObject1.getString("city_name");
                     String state = jsonObject1.getString("state_name");
                     String country = jsonObject1.getString("country_name");
+                    MainActivity.sortedProfileList.clear();
                     ProfileShorted profileShorted = new ProfileShorted(photoPath,matri_id, name, age, height, religion, caste, gotra, education, city, state, country);
                     MainActivity.sortedProfileList.add(profileShorted);
                 }

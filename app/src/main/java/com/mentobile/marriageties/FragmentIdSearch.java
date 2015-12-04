@@ -29,20 +29,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FragmentIdSearch extends Fragment implements AdapterView.OnItemSelectedListener {
+public class FragmentIdSearch extends Fragment {
 
     private static final String TAG = "idSearch";
     ArrayList<NameValuePair> nameValuePairs = new ArrayList<>();
-
-    private Spinner spnGender;
     private EditText edID;
 
     private Button btnSearch;
     private Button btnSaveSearch;
 
-    List<String> listGender = new ArrayList<>();
-
-    private String strGender = "";
     private String strid = "";
     //http://matrimonialscript.in/ultimate_webservices/search.php?id_search=NE1&user_id=NE37
 
@@ -60,13 +55,6 @@ public class FragmentIdSearch extends Fragment implements AdapterView.OnItemSele
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_id_search, container, false);
-
-        spnGender = (Spinner) view.findViewById(R.id.search_id_spn_gender);
-        spnGender.setOnItemSelectedListener(this);
-
-        listGender = Arrays.asList(getResources().getStringArray(R.array.search_gender_type));
-        ArrayAdapter<String> adapterGender = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, listGender);
-        spnGender.setAdapter(adapterGender);
 
         edID = (EditText) view.findViewById(R.id.search_id_ed_keyword);
 
@@ -90,7 +78,6 @@ public class FragmentIdSearch extends Fragment implements AdapterView.OnItemSele
         strid = edID.getText().toString().trim();
         if (!TextUtils.isEmpty(strid)) {
             nameValuePairs.add(new BasicNameValuePair("user_id", Profile.getProfile().getEmailID()));
-            nameValuePairs.add(new BasicNameValuePair("gender", strGender));
             nameValuePairs.add(new BasicNameValuePair("id_search", strid));
 
             MyAsynchTask myAsynchTask = new MyAsynchTask();
@@ -103,16 +90,6 @@ public class FragmentIdSearch extends Fragment implements AdapterView.OnItemSele
     }
 
     private CProgressDialog cProgressDialog;
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        strGender = listGender.get(position);
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 
     private class MyAsynchTask extends AsyncTask<String, String, JSONObject> {
 
@@ -128,6 +105,7 @@ public class FragmentIdSearch extends Fragment implements AdapterView.OnItemSele
         protected JSONObject doInBackground(String... params) {
             WebService webService = new WebService();
             JSONObject jsonObject = webService.makeHttpRequest(Application.URL_SEARCH, nameValuePairs);
+            Log.d(TAG, "::::::Json Object " + jsonObject);
             try {
                 JSONArray jsonArray = jsonObject.getJSONArray("Country");
                 for (int i = 0; i < jsonArray.length(); i++) {
@@ -144,6 +122,7 @@ public class FragmentIdSearch extends Fragment implements AdapterView.OnItemSele
                     String city = jsonObject1.getString("city_name");
                     String state = jsonObject1.getString("state_name");
                     String country = jsonObject1.getString("country_name");
+                    MainActivity.sortedProfileList.clear();
                     ProfileShorted profileShorted = new ProfileShorted(photoPath,matri_id, name, age, height, religion, caste, gotra, education, city, state, country);
                     MainActivity.sortedProfileList.add(profileShorted);
                 }
