@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
@@ -47,7 +46,6 @@ public class AdapterViewPager extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-
 
         LayoutInflater inflater = (LayoutInflater) activity
                 .getSystemService(activity.LAYOUT_INFLATER_SERVICE);

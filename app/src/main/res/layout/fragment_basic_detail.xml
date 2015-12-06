@@ -1,0 +1,427 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.mentobile.profile.FragmentBasicDetail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_weight="20"
+                    android:padding="7dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="18"
+                        android:text="BASIC DETAILS"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/edit_profile_imgbtn_basic_detail"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/edit_profile" />
+                </TableRow>
+
+                <TableRow android:background="@color/bg_button_login">
+
+                    <View android:layout_height="1dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Name" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/view_profile_tv_name"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Deepak Sharma" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Age" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_age"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="27 years" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Height" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_height"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="5 Ft 6 in" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Weight" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_weight"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="40 KG" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Mother Tongue" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_tounge"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Marathi" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Marital Status" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_marital"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Married" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Skin Tone" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_skin_type"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Fair" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Body Type" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_body_type"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Slim" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Eating Habits" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_eating"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Veg" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Drinking" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_drinking"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Blood Group" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_blood"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="A+" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Smoking" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_smoking"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="No" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Profile Created By" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_profile_created_by"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Self" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Referenced By" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_referenced_by"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Birth Place" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_birth_place"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Mathura" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Birth Time" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_birth_time"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Not Available" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Other Known Language" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_other_language"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Hindi" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="20">
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="8"
+                        android:text="Hobby" />
+
+                    <TextView
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/edit_profile_tv_hobby"
+                        style="@style/TextView_Profile_detail"
+                        android:layout_weight="11"
+                        android:text="Cricket" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

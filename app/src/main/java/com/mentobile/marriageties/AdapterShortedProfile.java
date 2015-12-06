@@ -110,7 +110,21 @@ public class AdapterShortedProfile extends ArrayAdapter<ProfileShorted> implemen
         holder.tvCasteGotraEducation.setText(profileShorted.getCaste() + "-" + profileShorted.getGotra() + ", " + profileShorted.getEducation());
         holder.tvCityStateCountry.setText(profileShorted.getCity() + ", " + profileShorted.getState() + ", " + profileShorted.getCountry());
 
+        if(profileShorted.getShorted()!=null ) {
+            if (!profileShorted.getShorted().equalsIgnoreCase("Add To shortlist option")) {
+                holder.imgBtnShortListed.setBackgroundResource(R.mipmap.shortlist);
+            } else {
+                holder.imgBtnShortListed.setBackgroundResource(R.mipmap.shortlist_green);
+            }
+        }
 
+        if(profileShorted.getBlocked()!=null) {
+            if (profileShorted.getBlocked().equalsIgnoreCase("Add To blocklist option")) {
+                holder.imgBtnBlock.setBackgroundResource(R.mipmap.blocklist);
+            } else {
+                holder.imgBtnBlock.setBackgroundResource(R.mipmap.blocklist_green);
+            }
+        }
         return gridView;
     }
 
@@ -121,19 +135,19 @@ public class AdapterShortedProfile extends ArrayAdapter<ProfileShorted> implemen
 
         switch (v.getId()) {
             case R.id.row_shorted_img_sendMSG:
-                Log.d("AdapterShortedProfile",":::::Send Message");
+                Log.d("AdapterShortedProfile", ":::::Send Message");
                 break;
 
             case R.id.row_shorted_img_block:
-                Log.d("AdapterShortedProfile",":::::Block");
+                Log.d("AdapterShortedProfile", ":::::Block");
                 break;
 
             case R.id.row_shorted_img_shortlist:
-                Log.d("AdapterShortedProfile",":::::Shortlisted");
+                Log.d("AdapterShortedProfile", ":::::Shortlisted");
                 break;
 
             case R.id.row_shorted_btn_sendInterest:
-                Log.d("AdapterShortedProfile",":::::Interset");
+                Log.d("AdapterShortedProfile", ":::::Interset");
                 break;
 
         }

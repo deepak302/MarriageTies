@@ -7,14 +7,14 @@
     <RelativeLayout
         android:id="@+id/nv_header"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:background="@mipmap/bg">
+        android:layout_height="wrap_content"
+        android:background="@color/brown">
 
         <com.pkmmte.view.CircularImageView
             android:id="@+id/nv_header_img_pphoto"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
             android:src="@mipmap/contact_icon"
             app:civ_border="true"
             app:civ_borderColor="#FFFFFFFF"
@@ -45,5 +45,46 @@
             android:layout_toRightOf="@+id/nv_header_img_pphoto"
             android:text="@string/prompt_nv_email"
             android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/nvheader_tv_pname"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/edit_profile" />
+
+        <TextView
+            android:id="@+id/nvheader_tv_profile_complate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nv_header_img_pphoto"
+            android:layout_margin="10dp"
+            android:text="PROFILE COMPLETENESS"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/nvheader_tv_profile_complate_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/nvheader_tv_profile_complate"
+            android:layout_marginRight="15dp"
+            android:text="70%"
+            android:textColor="#ffffff" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignLeft="@+id/nvheader_tv_profile_complate"
+            android:layout_below="@+id/nvheader_tv_profile_complate"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="25dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="70"
+            android:progressDrawable="@drawable/progressbar_horizontal" />
     </RelativeLayout>
 </RelativeLayout>

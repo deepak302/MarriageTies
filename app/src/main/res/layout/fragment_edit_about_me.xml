@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mentobile.profile.FragmentEditAboutMe">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_weight="20"
+                    android:padding="7dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="18"
+                        android:text="ABOUT ME"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/edit_profile_imgbtn_aboutme"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/edit_profile" />
+                </TableRow>
+
+                <TableRow android:background="@color/bg_button_login">
+
+                    <View android:layout_height="1dp" />
+                </TableRow>
+                <TextView
+                    android:id="@+id/edit_profile_tv_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hi My Name is Deepak Sharma, and i am married person and we lookign for beautiful and sexy girl for me." />
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

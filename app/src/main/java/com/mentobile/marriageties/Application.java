@@ -36,25 +36,43 @@ public class Application {
     public final static String URL = "http://www.mentobile.com/homzz/";
     public final static String SP_LOGIN_LOGOUT = "login_logout";
 
-    public final static String URL_REGISTRATION = "http://matrimonialscript.in/ultimate_webservices/final_regi.php";
-    public final static String URL_LOGIN = "http://matrimonialscript.in/ultimate_webservices/login.php";
-    public final static String URL_RELIGION = "http://matrimonialscript.in/ultimate_webservices/get-religion.php";
-    public final static String URL_MOTHER_TONGUE = "http://matrimonialscript.in/ultimate_webservices/get-mothertongue.php";
-    public final static String URL_CASTE_MULTIPLE = "http://matrimonialscript.in/ultimate_webservices/get_multiple_cast.php?religion_id=";
-    public final static String URL_COUNTRY = "http://matrimonialscript.in/ultimate_webservices/get-country.php";
-    public final static String URL_STATE = "http://matrimonialscript.in/ultimate_webservices/get_multiple_state.php?country_id=";
-    public final static String URL_CITY = "http://matrimonialscript.in/ultimate_webservices/get_multiple_city.php?country_id=";
-    public final static String URL_EDUCATION = "http://matrimonialscript.in/ultimate_webservices/get-education.php";
-    public final static String URL_OCCUPATION = "http://matrimonialscript.in/ultimate_webservices/get-occupation.php";
-    public final static String URL_DESIGNATION = "http://matrimonialscript.in/ultimate_webservices/get_designation.php";
-    public final static String URL_PART_MATCHES = "http://matrimonialscript.in/ultimate_webservices/custom_match.php";
-    public final static String URL_SEARCH = "http://matrimonialscript.in/ultimate_webservices/search.php";
-    public final static String URL_VIEW_PROFILE = "http://matrimonialscript.in/ultimate_webservices/view_profile.php";
-    public final static String URL_PHOTO_CROP = "http://matrimonialscript.in/ultimate_webservices/photos/";
-    public final static String URL_PHOTO_BIG = "http://matrimonialscript.in/ultimate_webservices/photos_big/";
-    public final static String URL_UPLOAD_SMALL  = "http://matrimonialscript.in/ultimate_webservices/fileupload.php";
-    public final static String URL_UPLOAD_BIG = "http://matrimonialscript.in/ultimate_webservices/fileupload1.php";
-    public final static String URL_SUCCESS_STORY = "http://matrimonialscript.in/ultimate_webservices/get-successstory.php";
+    public final static String URL_WEB = "http://matrimonialscript.in/ultimate_webservices/";
+
+    public final static String URL_REGISTRATION = URL_WEB + "final_regi.php";
+    public final static String URL_LOGIN = URL_WEB + "login.php";
+    public final static String URL_RELIGION = URL_WEB + "get-religion.php";
+    public final static String URL_MOTHER_TONGUE = URL_WEB + "get-mothertongue.php";
+    public final static String URL_CASTE_MULTIPLE = URL_WEB + "get_multiple_cast.php?religion_id=";
+    public final static String URL_COUNTRY = URL_WEB + "get-country.php";
+    public final static String URL_STATE = URL_WEB + "get_multiple_state.php?country_id=";
+    public final static String URL_CITY = URL_WEB + "get_multiple_city.php?country_id=";
+    public final static String URL_EDUCATION = URL_WEB + "get-education.php";
+    public final static String URL_OCCUPATION = URL_WEB + "get-occupation.php";
+    public final static String URL_DESIGNATION = URL_WEB + "get_designation.php";
+    public final static String URL_PART_MATCHES = URL_WEB + "custom_match.php";
+    public final static String URL_SEARCH = URL_WEB + "search.php";
+    public final static String URL_VIEW_PROFILE = URL_WEB + "view_profile.php";
+    public final static String URL_PHOTO_CROP = URL_WEB + "photos/";
+    public final static String URL_PHOTO_BIG = URL_WEB + "photos_big/";
+    public final static String URL_UPLOAD_SMALL = URL_WEB + "fileupload.php";
+    public final static String URL_UPLOAD_BIG = URL_WEB + "fileupload1.php";
+    public final static String URL_SUCCESS_STORY = URL_WEB + "get-successstory.php";
+
+
+    public final static String URL_PROFILE_SHORTED = URL_WEB + "get_shortlist.php";
+    public final static String URL_ADD_SHORTED = URL_WEB + "add_to_short_list.php?user_id=NE37&short_id=NE1";
+    public final static String URL_REMOVE_SHORTED = URL_WEB + "remove_shortlist.php?user_id=NE37&short_remove_id=NE1";
+
+    public final static String URL_PROFILE_BLOCKED = URL_WEB + "get_blocklist.php?user_id=NE37";
+    public final static String URL_ADD_BLOCKED = URL_WEB + "add_to_block_list.php?user_id=NE37&block_id=NE1";
+    public final static String URL_REMOVE_BLOCKED = URL_WEB + "remove_blocklist.php?user_id=NE37&block_remove_id=NE1";
+
+
+    public final static String URLM_SEARCH = "http://www.marriageties.com/appwebservices/search.php";
+    public final static String URLM_PROFILE_SHORTED = "http://www.marriageties.com/appwebservices/get_shortlist.php";
+    public final static String URLM_ADD_SHORTED = "http://www.marriageties.com/appwebservices/add_to_short_list.php";
+    public final static String URLM_REMOVE_SHORTED = "http://www.marriageties.com/appwebservices/remove_shortlist.php";
+
 
     public static final String DATE_PATTERN1 = "dd.MM.yy";
     public static final String DATE_PATTERN2 = "yyyyMMdd";

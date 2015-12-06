@@ -66,6 +66,12 @@
         <item>Id Search</item>
     </string-array>
 
+    <string-array name="tab_main_page">
+        <item>Recently Joined</item>
+        <item>Short Listed</item>
+        <item>Block Listed</item>
+    </string-array>
+
     //Navigation Drawer
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -105,5 +111,8 @@
     <string name="prompt_search_id">
         Find profiles faster with id search.Exp :NE11110
     </string>
+    <string name="title_activity_short_listed">ShortListedActivity</string>
+    <string name="title_activity_block_profile">BlockProfileActivity</string>
+    <string name="title_activity_edit_profile">EditProfileActivity</string>
 
 </resources>

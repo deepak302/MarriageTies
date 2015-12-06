@@ -17,6 +17,8 @@ public class ProfileShorted {
     private String city;
     private String state;
     private String country;
+    private String shorted;
+    private String blocked;
 
     public ProfileShorted(String photo, String id, String name, String age, String height, String religion, String caste, String gotra, String education, String city, String state, String country) {
         this.photo = photo;
@@ -31,6 +33,23 @@ public class ProfileShorted {
         this.city = city;
         this.state = state;
         this.country = country;
+    }
+
+    public ProfileShorted(String photo, String id, String name, String age, String height, String religion, String caste, String gotra, String education, String city, String state, String country, String shorted, String blocked) {
+        this.photo = photo;
+        this.Id = id;
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.religion = religion;
+        this.caste = caste;
+        this.gotra = gotra;
+        this.education = education;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.shorted = shorted;
+        this.blocked = blocked;
     }
 
     public String getPhoto() {
@@ -127,5 +146,21 @@ public class ProfileShorted {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getShorted() {
+        return shorted;
+    }
+
+    public void setShorted(String shorted) {
+        this.shorted = shorted;
+    }
+
+    public String getBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(String blocked) {
+        this.blocked = blocked;
     }
 }
